@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="../../plugin/dataStatistics.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../plugin/md5.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../plugin/aide.js?v=201610170912" async></script>
+		<script src="../../plugin/app.js?v=201609181415" async></script>
+		<script src="backLogistical.js?v=201609011717" async></script>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width = device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1" />
+		<meta content="telephone=no" name="format-detection" />
+		<title>填写物流信息</title>
+		<link rel="stylesheet" type="text/css" href="../../public-style/style.css?v=201610170912" />
+		<link rel="stylesheet" type="text/css" href="backLogistical.css?v=201609011717" />
+	</head>
+	<body>
+		<header class="headerPub">
+			<img class="back-but" src="../../img/icon/icon_back@3x.png" />
+			<p class="headerPub__title">填写物流信息</p>
+		</header>
+		<section class="status">
+			<div class="status__titleBox">
+				<img class="status__img" src="../../img/icon/topbar_help.png" />
+				<h3 class="status__title">等待回寄</h3>
+			</div>
+			<p class="status__loan">退款金额：<span class="status__total"></span></p>
+			<p class="status__time">申请时间：<span class="status__backTime"></span></p>
+		</section>
+		<section class="backAddr">
+			<p class="backAddr__title">退货地址：</p>
+			<p class="backAddr__txt"></p>
+		</section>
+		<section class="logistical">
+			<div class="logistical__item">
+				<div class="logistical__title">物流配送<span class="logistical__mark"> *</span></div>
+				<div class="logistical__selBox">
+					<select class="logistical__select" name="" repeat='logistical__select'>
+						<option></option>
+						<option value="">请选择物流公司</option>
+					</select>
+				</div>
+			</div>
+			<div class="logistical__item">
+				<div class="logistical__title">物流单号<span class="logistical__mark"> *</span></div>
+				<input class="logistical__input" type="text" placeholder="填写物流单号" />
+			</div>
+		</section>
+		<section class="btnBox">
+			<button class="btnBox__btn">提交申请</button>
+		</section>
+	</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<script src="../../plugin/dataStatistics.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../plugin/md5.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../plugin/aide.js?v=201610170912" async></script>
+		<script src="../../plugin/app.js?v=201609181415" async></script>
+		<script src="drawback.js?v=201610170912" async></script>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width = device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<meta name="msapplication-tap-highlight" content="no" />
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1" />
+		<meta content="telephone=no" name="format-detection" />
+		<title>退款申请</title>
+		<link rel="stylesheet" type="text/css" href="../../public-style/style.css?v=201610170912" />
+		<link rel="stylesheet" type="text/css" href="drawback.css?v=201609011717" />
+	</head>
+
+	<body>
+		<header class="headerPub">
+			<img class="back-but" src="../../img/icon/icon_back@3x.png" />
+			<p class="headerPub__title">退款申请</p>
+		</header>
+		<section class="proInfo">
+			<div class="proInfo__shopInfo">
+				<img class="proInfo__shopIcon" src="../../img/icon/icon_shop@3x-min.png" />
+				<div class="proInfo__gotoshop">
+					<span class="proInfo__shopName"></span>
+					<!--<img class="proInfo__gotoIcon" src="../../img/icon/Triangle1@3x.png" />-->
+				</div>
+				<a class="proInfo__TELIcon" href="javascript:void(0);"></a>
+				<!--<img class="proInfo__TELIcon" src="../../img/icon/icon_Phone@3x-min.png" />-->
+			</div>
+			<div class="proInfo__list">
+				<div class="proInfo__item">
+					<img class="proInfo__proImg"/>
+					<div class="proInfo__infoBox">
+						<p class="proInfo__proTitle"></p>
+						<p class="proInfo__proSku"></p>
+						<p class="proInfo__proPriceBox"><span class="proInfo__proPrice"></span><span class="proInfo__proNum"></span></p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<form class="drawbackInfo">
+			<div class="infoItem">
+				<div class="infoItem__title">售后服务类型<span class="mark"> *</span></div>
+				<div class="infoItem__main">
+					<select class="servicetype__sel" name="">
+						<option value=''>请选择</option>
+						<option value="1">仅退款</option>
+						<option value="0">退货退款</option>
+					</select>
+				</div>
+			</div>
+			<div class="infoItem">
+				<div class="infoItem__title">售后商品数量<span class="mark"> *</span></div>
+				<div class="infoItem__main">
+					<img class="infoItem__NumDec" src="../../img/icon/dec-min.png">
+					<input class="infoItem__NumShow" type="tel" value="1">
+					<img class="infoItem__NumAdd" src="../../img/icon/add-min.png">
+				</div>
+			</div>
+			<div class="infoItem noMargin">
+				<div class="infoItem__title">退款金额<span class="mark"> *</span></div>
+				<div class="infoItem__main">
+					<span class="infoItem__symbols">￥</span>
+					<input class="infoItem__loan" type="number" value="">
+				</div>
+			</div>
+			<p class="explain">(退款说明：优惠券不参与退款）</p>
+			<div class="reason">
+				<div class="reason__item">
+					<div class="reason__title">申请理由<span class="mark"> *</span></div>
+					<div class="reason__selBox">
+						<select class="reason__select" name="">
+							<option value=''>请选择退款原因</option>
+							<option>收到商品破损</option>
+							<option>商品错发/漏发</option>
+							<option>商品需要维修</option>
+							<option>发票问题</option>
+							<option>收到商品不符</option>
+							<option>未收到货</option>
+							<option>假冒品牌</option>
+							<option>未按约定时间发货</option>
+						</select>
+					</div>
+				</div>
+				<div class="reason__item">
+					<div class="reason__title">退款说明</div>
+					<input class="reason__input" type="text" placeholder="填写退款说明（不超过25个字）" maxlength="25" />
+				</div>
+			</div>
+
+			<div class="formBox__fileBox">
+				<div class="formBox__PicListBox">
+				</div>
+				<div class="formBox__FileBox">
+					<input class="formBox__File" type="file" multiple='true' />
+				</div>
+			</div>
+
+			<div class="formBox__submitBox">
+				<input class="formBox__submit" type="button" value="提交申请" />
+			</div>
+
+		</form>
+		<aside class="loadingBg">
+			<div class="loadingBg__Box">
+				<img class="loadingBg__img" src="../../img/icon/loading.gif" />
+				<p class="loadingBg__text"></p>
+			</div>
+		</aside>
+	</body>
+
+</html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+	<head>
+		<script src="../../plugin/dataStatistics.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../plugin/md5.min.js"></script>
+		<script src="../../plugin/aide.js?v=201610170912" async></script>
+		<script src="../../plugin/app.js?v=201609181415" async></script>
+		<script src="myOrder.js?v=201609011717" async></script>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width = device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1" />
+		<meta content="telephone=no" name="format-detection" />
+		<title>我的订单</title>
+		<!--<script type="text/javascript">
+			innerLink('../../public-style/style.css');
+			innerLink('myOrder.css');
+		</script>-->
+		<link rel="stylesheet" type="text/css" href="../../public-style/style.css?v=201610170912" />
+		<link rel="stylesheet" type="text/css" href="myOrder.css?v=201609011717" />
+	</head>
+
+	<body>
+
+		<header class="back-tit">
+			<img class="back-but" src="../../img/icon/icon_back@3x.png" /> 我的订单
+		</header>
+
+		<section class="men">
+			<div id="buts" class="box">
+				<!--<div data-tag = "all" data-type = "0" data-hash='#all'>
+					<img class="act" src="../../img/order-nav/abs_all_selected@3x-min.png"/>
+					<img class="sta" src="../../img/order-nav/abs_all@3x-min.png" /> 
+					全部
+				</div>-->
+				<div data-tag="payment" data-type="1" data-hash='#payment'>
+					<div>
+						<img class="act" src="../../img/order-nav/tabs_pay_selected@3x.png" />
+						<img class="sta" src="../../img/order-nav/tabs_pay@3x.png" />
+						<div id="paymentCount"></div>
+					</div>
+					待付款
+
+				</div>
+				<div data-tag="delivery" data-type="2" data-hash='#delivery'>
+					<div>
+						<img class="act" src="../../img/order-nav/tabs_send_goods_selected@3x.png" />
+						<img class="sta" src="../../img/order-nav/tabs_send_goods@3x.png" />
+						<div id="deliveryCount"></div>
+					</div>
+					待发货
+
+				</div>
+				<div data-tag="receipt" data-type="3" data-hash='#receipt'>
+					<div>
+						<img class="act" src="../../img/order-nav/tabs_received_goods_selected@3x.png" />
+						<img class="sta" src="../../img/order-nav/tabs_received_goods@3x.png" />
+						<div id="receiptCount"></div>
+					</div>已发货
+
+				</div>
+				<div data-tag="complete" data-type="4" data-hash='#complete'>
+					<div>
+						<img class="act" src="../../img/order-nav/tabs_completed_selceted@3x.png" />
+						<img class="sta" src="../../img/order-nav/tabs_completed@3x.png" />
+					</div>已完成
+				</div>
+				<div data-tag="refund" data-type="5" data-hash='#refund'>
+					<div>
+						<img class="act" src="../../img/order-nav/my_mybuy_refund_selected@3x.png" />
+						<img class="sta" src="../../img/order-nav/tabs_refund@3x.png" />
+						<div id="refundCount"></div>
+					</div>退款
+
+				</div>
+			</div>
+		</section>
+
+		<article id="views" class="con">
+			<p class="ref">刷新中</p>
+
+			<!--<section repeat='all' id="all" class="view hide" data-type = "0">
+				
+				<div>
+					<header>
+						<img src="../../img/icon/icon_shop@3x-min.png" />
+						<param att="storeName" />
+						<span att='status'></span>
+					</header>
+					<div>
+						<img att='img' />
+						<p><param att="product"/></p>
+					</div>
+					<footer>
+						合计：￥<param att="productPrice" />
+					</footer>
+				</div>
+				
+			</section>-->
+
+			<section repeat='payment' id="payment" class="view hide" data-type="1">
+				<div>
+					<header>
+						<img src="../../img/icon/icon_shop@3x-min.png" />
+						<param att="storeName" />
+						<span att='status'></span>
+					</header>
+					<div class="proList" repeat='paymentList'>
+						<div>
+							<img att='img' />
+							<p class="proTitle">
+								<param att="product" />
+							</p>
+							<p class="skuName">
+								<param att="sku" />
+							</p>
+							<p class="proPrice">
+								￥
+								<param att="price" /><span class="proNum">×<span att='proNum'></span></span>
+							</p>
+						</div>
+					</div>
+					<p class='totalBox'>共<span att='allProNum'></span>件商品，合计：￥<span att='total'></span>(含运费)</p>
+					<footer>
+
+					</footer>
+				</div>
+			</section>
+
+			<section repeat='delivery' id="delivery" class="view hide" data-type="2">
+				<div>
+					<header>
+						<img src="../../img/icon/icon_shop@3x-min.png" />
+						<param att="storeName" />
+						<span att='status'></span>
+					</header>
+					<div class="proList" repeat='deliveryList'>
+						<div>
+							<img att='img' />
+							<p class="proTitle">
+								<param att="product" />
+							</p>
+							<p class="skuName">
+								<param att="sku" />
+							</p>
+							<p class="proPrice">
+								￥
+								<param att="price" /><span class="proNum">×<span att='proNum'></span></span>
+							</p>
+						</div>
+					</div>
+					<p class='totalBox'>共<span att='allProNum'></span>件商品，合计：￥<span att='total'></span>(含运费)</p>
+					<footer>
+
+					</footer>
+				</div>
+			</section>
+
+			<section repeat='receipt' id="receipt" class="view hide" data-type="3">
+				<div>
+					<header>
+						<img src="../../img/icon/icon_shop@3x-min.png" />
+						<param att="storeName" />
+						<span att='status'></span>
+					</header>
+					<div class="proList" repeat='receiptList'>
+						<div>
+							<img att='img' />
+							<p class="proTitle">
+								<param att="product" />
+							</p>
+							<p class="skuName">
+								<param att="sku" />
+							</p>
+							<p class="proPrice">
+								￥
+								<param att="price" /><span class="proNum">×<span att='proNum'></span></span>
+							</p>
+						</div>
+					</div>
+					<p class='totalBox'>共<span att='allProNum'></span>件商品，合计：￥<span att='total'></span>(含运费)</p>
+					<footer>
+
+					</footer>
+				</div>
+			</section>
+
+			<section repeat='complete' id="complete" class="view hide" data-type="4">
+				<div>
+					<header>
+						<img src="../../img/icon/icon_shop@3x-min.png" />
+						<param att="storeName" />
+						<span att='status'></span>
+					</header>
+					<div class="proList" repeat='completeList'>
+						<div>
+							<img att='img' />
+							<p class="proTitle">
+								<param att="product" />
+							</p>
+							<p class="skuName">
+								<param att="sku" />
+							</p>
+							<p class="proPrice">
+								￥
+								<param att="price" /><span class="proNum">×<span att='proNum'></span></span>
+							</p>
+						</div>
+					</div>
+					<p class='totalBox'>共<span att='allProNum'></span>件商品，合计：￥<span att='total'></span>(含运费)</p>
+					<footer>
+
+					</footer>
+				</div>
+			</section>
+
+			<section repeat='refund' id="refund" class="view hide" data-type="5">
+				<div>
+					<header>
+						<img src="../../img/icon/icon_shop@3x-min.png" />
+						<param att="storeName" />
+						<span att='status'></span>
+					</header>
+					<div class="proList" repeat='refundList'>
+						<div>
+							<img att='img' />
+							<p class="proTitle">
+								<param att="product" />
+							</p>
+							<p class="skuName">
+								<param att="sku" />
+							</p>
+							<p class="proPrice">
+								￥
+								<param att="price" /><span class="proNum">×<param att='proNum'/></span>
+							</p>
+						</div>
+					</div>
+					<p class='totalBox'>订单金额：<span class="totalBox__order" att='orderTotal'></span>退款金额：<span att='refundTotal'></span></p>
+					<footer>
+
+					</footer>
+				</div>
+			</section>
+
+			<p id="orderLoading" class="add">加载更多数据中</p>
+		</article>
+
+		<div class="isdelPub" style="display: none;">
+			<div class="delPubBox">
+				<div id="delPubBox__text" class="delPubBox__text">确定关闭该订单？</div>
+				<div class="delPubBox__bottom">
+					<p class="delPubBox__yes">确定</p>
+					<p class="delPubBox__no">取消</p>
+				</div>
+			</div>
+		</div>
+		<aside class="loadingBg">
+			<img class="loadingBg__img" src="../../img/icon/loading.gif" />
+		</aside>
+	</body>
+
+</html>

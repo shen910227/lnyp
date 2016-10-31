@@ -1,0 +1,153 @@
+body {
+	padding-top: 40px;
+	background-color: #F4F4F4;
+}
+
+.status {
+	width: 100%;
+	margin-bottom: 10px;
+	padding: 5px 15px 10px;
+	box-sizing: border-box;
+	background-color: #fff;
+}
+
+.status__titleBox {
+	height: 38px;
+	line-height: 38px;
+	position: relative;
+}
+
+.status__img {
+	width: 18px;
+	height: 18px;
+	position: absolute;
+	top: 9px;
+	left: 0;
+}
+
+.status__title {
+	padding-left: 23px;
+	font-size: 14px;
+	color: #f02804;
+	font-weight: normal;
+}
+
+.status__loan,
+.status__time {
+	font-size: 14px;
+	color: #222;
+	line-height: 24px;
+}
+
+.logistical,
+.infoShow__item {
+	height: 44px;
+	margin-bottom: 10px;
+	background-color: #fff;
+	font-size: 14px;
+	color: #222;
+	line-height: 44px;
+	position: relative;
+}
+
+.infoShow__explain {
+	min-height: 44px;
+	margin-bottom: 10px;
+	background-color: #fff;
+	font-size: 14px;
+	color: #222;
+	line-height: 44px;
+	position: relative;
+}
+
+.logistical {
+	display: none;
+}
+
+.logistical__title,
+.infoShow__title {
+	height: 100%;
+	position: absolute;
+	left: 15px;
+	top: 0;
+}
+
+.infoShow__explainT {
+	height: 100%;
+	box-sizing: border-box;
+	padding-top: 15px;
+	line-height: 16px;
+	position: absolute;
+	left: 15px;
+	top: 0;
+}
+
+.logistical__main,
+.infoShow__main {
+	height: 100%;
+	padding-left: 90px;
+}
+
+.infoShow__explainM {
+	padding: 15px 15px 15px 90px;
+	line-height: 16px;
+}
+
+.logistical__img {
+	width: 12px;
+	height: 12px;
+	position: absolute;
+	right: 15px;
+	top: 16px;
+}
+
+.infoShow {
+	background-color: #fff;
+	font-size: 14px;
+	color: #222;
+}
+
+.infoShow__item {
+	margin-bottom: 0;
+}
+
+.infoShow__item:after {
+	content: '';
+	display: block;
+	width: 100%;
+	border-bottom: 1px solid #e9e9e9;
+	transform: scaleY(0.5);
+	-webkit-transform: scaleY(0.5);
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+.infoShow__item:last-child:after {
+	border: none;
+}
+
+.infoDetail {
+	padding: 10px 0;
+	margin-top: 10px;
+	background-color: #fff;
+}
+
+.infoDetail__item {
+	background-color: #fff;
+	font-size: 14px;
+	color: #999;
+	line-height: 24px;
+	position: relative;
+}
+
+.infoDetail__title {
+	position: absolute;
+	left: 15px;
+	top: 0;
+}
+
+.infoDetail__main {
+	padding-left: 100px;
+	min-height: 24px;
+}

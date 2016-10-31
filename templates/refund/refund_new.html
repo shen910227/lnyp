@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="../../plugin/dataStatistics.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../plugin/aide.js?v=201610170912" async></script>
+		<script src="../../plugin/app.js?v=201609181415" async></script>
+		<script src="refund_new.js?v=201609011717" async></script>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width = device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<meta name="msapplication-tap-highlight" content="no" />
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1" />
+		<meta content="telephone=no" name="format-detection" />
+		<title>申请退款</title>
+		<link rel="stylesheet" type="text/css" href="../../public-style/style.css?v=201610170912"/>
+		<link rel="stylesheet" type="text/css" href="refund_new.css?v=201609011717"/>
+	</head>
+	<body>
+		<header class="headerPub">
+			<img class="back-but" src="../../img/icon/icon_back@3x.png"/>
+			<p class="headerPub__title">申请退款</p>
+		</header>
+		<section class="formBox">
+			<form class="formBox__main">
+				<div class="formBox__itemBox" id="RefundType">
+					<label class="formBox__label"><span class="formBox__required">*</span>申请服务</label>
+					<select class="formBox__select">
+						<option>退货退款</option>
+						<option>仅退款</option>
+						<option>换货</option>
+					</select>
+				</div>
+				<div class="formBox__itemBox" id="changeReason">
+					<label class="formBox__label"><span class="formBox__required">*</span>换货原因</label>
+					<select class="formBox__select">
+						<option value=""></option>
+						<option>大小尺寸与商品描述不符</option>
+						<option>卖家发错货</option>
+						<option>尺码拍错/不喜欢/不舒服/效果差</option>
+						<option>颜色/图案/款式与描述不符</option>
+						<option>收到商品少件或破损</option>
+						<option>材质/面料与商品描述不符</option>
+						<option>质量问题</option>
+						<option>其它</option>
+					</select>
+				</div>
+				<div class="formBox__itemBox" id="logisticStatus">
+					<label class="formBox__label"><span class="formBox__required">*</span>物流状态</label>
+					<select class="formBox__select">
+						<option value=""></option>
+						<option>已收到货</option>
+						<option>未收到货</option>
+					</select>
+				</div>
+				<div class="formBox__itemBox" id="amount">
+					<label class="formBox__label"><span class="formBox__required">*</span>退款金额</label>
+					<input class="formBox__input" type="text"  />
+				</div>
+				<div class="formBox__itemBox" id="refundReason">
+					<label class="formBox__label"><span class="formBox__required">*</span>退款原因</label>
+					<select class="formBox__select">
+						<option value=""></option>
+						<option>大小尺寸与商品描述不符</option>
+						<option>卖家发错货</option>
+						<option>尺码拍错/不喜欢/不舒服/效果差</option>
+						<option>颜色/图案/款式与描述不符</option>
+						<option>收到商品少件或破损</option>
+						<option>材质/面料与商品描述不符</option>
+						<option>质量问题</option>
+						<option>其它</option>
+					</select>
+				</div>
+				<div class="formBox__itemBox" id="note">
+					<label class="formBox__label"><span class="formBox__forAlign">*</span>备注</label>
+					<input class="formBox__input" type="text"  />
+				</div>
+				<div class="formBox__fileBox">
+					<div class="formBox__PicListBox">
+					</div>
+					<div class="formBox__FileBox">
+						<input class="formBox__File" type="file" multiple='true'/>	
+					</div>
+				</div>
+				<div class="formBox__submitBox">
+					<input class="formBox__submit" type="submit" value="提交申请"/>
+				</div>
+			</form>
+		</section>
+		<script type="text/javascript">
+			var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+			document.write(unescape("%3Cspan style='display:none;' id='cnzz_stat_icon_1260381580'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1260381580' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+	</body>
+	<script src="../../plugin/iosSelectJs/areaData_v2.js?v=201607131400"></script>
+		<script src="../../plugin/iosSelectJs/zepto.js?v=201607131400"></script>
+		<script src="../../plugin/iosSelectJs/iosSelect.js?v=201607131400"></script>
+		<script src="../../plugin/iosSelectJs/iscroll.js?v=201607131400"></script>
+		<script type="text/javascript">
+			onload = function() {
+				initIosSelect();
+			}
+			function initIosSelect() {
+				var selectContactDom = $('#select_contact');
+				var showContactDom = $('#show_contact');
+				var contactProvinceCodeDom = $('#contact_province_code');
+				var contactCityCodeDom = $('#contact_city_code');
+				var contactDistrictCodeDom = $('#contact_district_code');
+				selectContactDom.bind('click', function() {
+					var sccode = showContactDom.attr('data-city-code');
+					var scname = showContactDom.attr('data-city-name');
+					var oneLevelId = showContactDom.attr('data-province-code');
+					var twoLevelId = showContactDom.attr('data-city-code');
+					var threeLevelId = showContactDom.attr('data-district-code');
+					var iosSelect = new IosSelect(3, [iosProvinces, iosCitys, iosCountys], {
+						title: '地址选择',
+						itemHeight: 35,
+						oneTwoRelation: 1,
+						twoThreeRelation: 1,
+						oneLevelId: oneLevelId,
+						twoLevelId: twoLevelId,
+						threeLevelId: threeLevelId,
+						callback: function(selectOneObj, selectTwoObj, selectThreeObj) {
+							
+							contactProvinceCodeDom.val(selectOneObj.id);
+							contactProvinceCodeDom.attr('data-province-name', selectOneObj.value);
+							
+							contactCityCodeDom.val(selectTwoObj.id);
+							contactCityCodeDom.attr('data-city-name', selectTwoObj.value);
+							
+							contactDistrictCodeDom.val(selectThreeObj.id);
+							contactDistrictCodeDom.attr('data-district-name', selectThreeObj.value);
+							
+							showContactDom.attr('data-province-code', selectOneObj.id);
+							showContactDom.attr('data-city-code', selectTwoObj.id);
+							showContactDom.attr('data-district-code', selectThreeObj.id);
+							showContactDom.html(selectOneObj.value + ' ' + selectTwoObj.value + ' ' + selectThreeObj.value);
+						}
+					});
+				});
+			}
+		</script>
+</html>

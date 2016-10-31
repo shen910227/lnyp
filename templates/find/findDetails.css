@@ -1,0 +1,66 @@
+.headerPub__back {
+	height: 18px;
+	padding: 11px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.headerPub__img {
+	position: absolute;
+	top: 7px;
+	right: 15px;
+	width: 26px;
+	height: 26px;
+}
+.mainTitle {
+	margin-top: 40px;
+	padding: 20px 15px 10px;
+	font-size: 18px;
+	color: #222;
+	line-height: 20px;
+}
+
+.creatTime {
+	padding: 0 15px 15px;
+	font-size: 10px;
+	color: #999;
+}
+
+.mainContent {
+	padding: 0 15px;
+}
+
+.mainContent__item {}
+
+.mainContent__txt {
+	padding-bottom: 15px;
+	font-size: 14px;
+	color: #4a4a4a;
+	line-height: 22px;
+}
+.mainContent__video {
+	width: 100%;
+}
+.mainContent__imgBox {
+	width: 100%;
+	margin-bottom: 15px;
+	position: relative;
+}
+
+.mainContent__img {
+	width: 100%;
+}
+
+.gotoNext {
+	height: 30px;
+	padding: 0 7px;
+	background-color: rgba(34, 34, 34, 0.7);
+	font-size: 14px;
+	color: #fff;
+	text-align: center;
+	line-height: 30px;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	display: none;
+}

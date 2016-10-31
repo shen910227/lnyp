@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html>
+
+	<head>
+		<script src="../../plugin/dataStatistics.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../plugin/aide.js?v=201610170912" async></script>
+		<script src="../../plugin/app.js?v=201609181415" async></script>
+		<script src="confirmPay.js?v=201610170912" async></script>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width = device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<meta name="msapplication-tap-highlight" content="no" />
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1" />
+		<meta content="telephone=no" name="format-detection" />
+		<title>确认支付</title>
+		<link rel="stylesheet" type="text/css" href="../../public-style/style.css?v=201610170912" />
+		<link rel="stylesheet" type="text/css" href="confirmPay.css?v=201610170912" />
+	</head>
+
+	<body>
+		<header class="headerPub">
+			<img class="back-but" src="../../img/icon/icon_back@3x.png" />
+			<p class="headerPub__title">订单确认</p>
+		</header>
+		<section class="payInfoBox">
+			<div class="payInfoBox__orderNo">订单号：<span class="orderNo"></span></div>
+			<table class="payInfoBox__table" border="0" cellspacing="0" cellpadding="0">
+				<tr class="payInfoBox__tr">
+					<td class="payInfoBox__title">订单总金额（含运费￥<span class="payInfo__freight"></span>）</td>
+					<td class="payInfoBox__main" id="totalAmount"></td>
+				</tr>
+				<tr class="payInfoBox__tr">
+					<td class="payInfoBox__title">优惠券</td>
+					<td class="payInfoBox__main" id='couponAmount'></td>
+				</tr>
+				<tr class="payInfoBox__tr">
+					<td class="payInfoBox__title">电子券</td>
+					<td class="payInfoBox__main" id='elcouponAmount'></td>
+				</tr>
+			</table>
+			<div class="payInfoBox__bottom">
+				<span class="payInfoBox__bottomTit">还需支付</span>
+				<span class="payInfoBox__bottomPay" id="orderAmount"></span>
+			</div>
+		</section>
+		<section class="paymentBox">
+			<p class="paymentBox__title">选择支付方式</p>
+			<div class="paymentBox__listBox" repeat='paymentBox__listBox'>
+				<div class="paymentBox__itemBox">
+					<input class="paymentBox__radio" type="radio" name="paytype" />
+					<img class="paymentBox__icon" />
+					<p class="paymentBox__text"></p>
+				</div>
+			</div>
+
+		</section>
+		<aside class="loadingBg">
+			<div class="loadingBg__Box">
+				<img class="loadingBg__img" src="../../img/icon/loading.gif">
+				<!--<p class="loadingBg__text">加载中</p>-->
+			</div>
+		</aside>
+		<form class="payFooter" id="pay_form" name="pay_form" method="post" action="">
+			<input id="appid" name="appid" type="hidden" value="">
+			<input id="sub_appid" name="sub_appid" type="hidden" value="">
+			<input id="order_no" name="order_no" type="hidden" value="">
+			<input id="order_type" name="order_type" type="hidden" value="">
+			<input id="method" name="method" type="hidden" value="">
+			<input id="user_name" name="user_name" type="hidden" value="">
+			<input id="order_subject" name="order_subject" type="hidden" value="">
+			<input id="order_body" name="order_body" type="hidden" value="">
+			<input id="version" name="version" type="hidden" value="">
+			<input id="paysuccessUrl" name="paysuccessUrl" type="hidden" value="">
+			<input id="payfailedUrl" name="payfailedUrl" type="hidden" value="">
+
+			<p class="payFooter__pay">实付款：￥<span class="realPay"></span></p>
+			<div class="payFooter__btn" onclick="confirmPay.doSubmit()">确认支付</div>
+
+		</form>
+		<aside class="fankaSMSBg">
+			<div class="fankaSMS">
+				<p class="fankaSMS__title">请输入手机验证码</p>
+				<div class="fankaSMS__txt">为了你的支付安全，请输入手机号收到的验证码，以完成支付</div>
+				<div class="fankaSMS__SMSBox">
+					<div class="fankaSMS__inputBoxs">
+						<input class="fankaSMS__input" type="number" placeholder="请输入验证码">
+					</div>
+					<button class="fankaSMS__getBtn">获取验证码</button>
+				</div>
+				<nav class="fankaSMS__YN">
+					<button class="fankaSMS__N">取消支付</button>
+					<button class="fankaSMS__Y">确认支付</button>
+				</nav>
+			</div>
+		</aside>
+		<aside class="aLiTips">
+			<img class="aLiTips__img" src="../../img/share/shareTips-min.png" />
+		</aside>
+	</body>
+
+</html>

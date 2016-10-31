@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+	<head>
+		<script src="../../plugin/dataStatistics.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../plugin/aide.js?v=201610170912" async></script>
+		<script src="../../plugin/app.js?v=201609181415" async></script>
+		<script src="search.js?v=201609011717" async></script>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width = device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1" />
+		<meta content="telephone=no" name="format-detection" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../../public-style/style.css?v=201610170912"/>
+		<link rel="stylesheet" type="text/css" href="search.css?v=201609011717"/>
+	</head>
+
+	<body>
+
+		<header class="inp-but border-linear-bottom">
+			<img class="back-but" src="../../img/icon/icon_back@3x.png" />
+			<input id="inp" type="search" placeholder="请输入搜索内容" x-webkit-speech="" x-webkit-grammar="builtin:search" lang="zh-CN">
+			<button id="smit">
+				搜索
+			</button>
+		</header>
+
+		<article id="log" class="alt" style="display: none;">
+			<section class="log">
+				<p class="border-linear-bottom">搜索历史</p>
+				<div id="search-log"></div>
+				<footer id='clearHistory'>
+					清除搜索历史
+				</footer>
+			</section>
+
+			<section class="rec">
+				<p>热门搜索</p>
+				<div id="search-rec">
+				</div>
+			</section>
+		</article>
+
+		<article id="box">
+
+			<section repeat='searchlist' id="view" class="pros">
+				
+				<div>
+					<span><img att='img'/></span>
+					<div>
+						<span att='tit'></span>
+					</div>
+					<p>
+						￥<param out='pirce' />
+						<span>已售<param out='cou' />件</span>
+					</p>
+				</div>
+
+			</section>
+			
+			<div id="addpage">
+				正在加载更多...
+			</div>
+			
+		</article>
+	</body>
+</html>

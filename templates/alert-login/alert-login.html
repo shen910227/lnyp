@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<script src="../../plugin/dataStatistics.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../plugin/aide.js?v=201610170912" type="text/javascript" charset="utf-8"></script>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width = device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1" />
+		<meta content="telephone=no" name="format-detection" />
+		<title>登录弹框模板</title>
+		<link rel="stylesheet" type="text/css" href="../../public-style/style.css?v=201610170912" />
+	</head>
+
+	<body>
+		<aside class="hide" id="login">
+			<div class="aside__box">
+				<p class="aside-box__title">登录</p>
+				<input class="phonenumber" type="tel" placeholder="请填写手机号码" />
+				<input class="password" type="password" placeholder="请填写密码" />
+				<footer class="aside-box__footer">
+					<button id="login-but">登录</button>
+					<button id="signup-but">注册</button>
+				</footer>
+			</div>
+		</aside>
+
+		<aside class="hide" id="reg">
+			<div class="aside__box">
+				<p class="aside-box__title">注册</p>
+				<input class="phonenumber" type="tel" placeholder="请填写手机号码" />
+				<div class="veriycodeBox">
+					<div class="inputBox">
+						<input id="veriycodeImg" type="text" placeholder="请填写图片验证码" />
+					</div>
+					<button id="get-verImg">
+					获取图片验证码
+				</button>
+				</div>
+				<div class="veriycodeBox">
+					<div class="inputBox">
+						<input id="veriycode" type="text" placeholder="请填写验证码" />
+					</div>
+
+					<button id="get-ver" class="abled">
+					获取验证码
+				</button>
+				</div>
+				<div class="veriycodeBox">
+					<div id="get-verSpe" class="abledSpe">试一试语音验证码</div>
+				</div>
+				<dl class="aside-box__dl">
+					<input class="regCheck" type="checkbox" checked="checked"> 已阅读并同意
+					<a style="color: #6b6b6b;" href="http://lnyph5.vpclub.cn/html/rua.html">《岭南优品注册使用协议》</a>
+				</dl>
+				<footer class="aside-box__footer">
+					<button id="next">下一步</button>
+					<button id="back">登录</button>
+				</footer>
+			</div>
+		</aside>
+
+		<aside class="hide" id="nex">
+			<div class="aside__box">
+				<p class="aside-box__title">验证成功</p>
+				<input class="newphonenumber" type="password" placeholder="请填写密码" />
+				<input class="repeatnewphonenumber" type="password" placeholder="请再次填写密码" />
+				<footer class="aside-box__footer">
+					<button id="conf">确认</button>
+				</footer>
+			</div>
+		</aside>
+	</body>
+
+</html>

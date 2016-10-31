@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<script src="../../plugin/dataStatistics.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../plugin/md5.min.js"></script>
+		<script src="../../plugin/aide.js?v=201610170912" async></script>
+		<script src="../../plugin/app.js?v=201609181415" async></script>
+		<script src="cancelOrder.js?v=201609011718" async></script>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width = device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1" />
+		<meta content="telephone=no" name="format-detection" />
+		<title>取消订单</title>
+		<link rel="stylesheet" type="text/css" href="../../public-style/style.css?v=201610170912" />
+		<link rel="stylesheet" type="text/css" href="cancelOrder.css?v=201609011717" />
+	</head>
+
+	<body>
+		<header class="headerPub">
+			<img class="back-but" src="../../img/icon/icon_back@3x.png" />
+			<p class="headerPub__title">取消订单</p>
+		</header>
+		<section class="explain">
+			<div class="explain__titleBox">
+				<img class="explain__img" src="../../img/icon/topbar_help.png" />
+				<h3 class="explain__title">取消订单需知</h3>
+			</div>
+			<p class="explain__main">待发货订单在取消时，请先联系品牌商确认商品是否已出库。已出库尚未维护物流信息的订单，可能被品牌商驳回申请哦！</p>
+		</section>
+
+		<section class="reason">
+			<div class="reason__item">
+				<div class="reason__title">申请理由<span class="reason__mark"> *</span></div>
+				<div class="reason__selBox">
+					<select class="reason__select" name="">
+						<option value=''>请选择退款原因</option>
+						<option>拍错了/订单信息错误</option>
+						<option>不想要了</option>
+					</select>
+				</div>
+			</div>
+			<div class="reason__item">
+				<div class="reason__title">退款说明</div>
+				<input class="reason__input" type="text" placeholder="填写退款说明（不超过25个字）" maxlength="25" />
+			</div>
+		</section>
+		<section class="btnBox">
+			<button class="btnBox__btn">提交申请</button>
+		</section>
+	</body>
+
+</html>

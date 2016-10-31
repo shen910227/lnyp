@@ -1,0 +1,365 @@
+body {
+	padding-top: 40px;
+	background-color: #eee;
+}
+
+.proInfo {
+	margin-bottom: 10px;
+	background-color: #fff;
+}
+
+.proInfo__shopInfo {
+	height: 44px;
+	font-size: 12px;
+	color: #222222;
+	line-height: 44px;
+	position: relative;
+}
+
+.proInfo__shopIcon {
+	width: 18px;
+	height: 18px;
+	position: absolute;
+	left: 15px;
+	top: 13px;
+}
+
+.proInfo__gotoshop {
+	padding-left: 37px;
+	padding-right: 44px;
+	position: relative;
+}
+
+.proInfo__shopName {}
+
+.proInfo__gotoIcon {
+	height: 10px;
+	margin-left: 4px;
+	margin-bottom: 2px;
+}
+
+.proInfo__TELIcon {
+	display: block;
+	width: 16px;
+	height: 16px;
+	padding: 14px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	background: url(../../img/icon/icon_Phone@3x-min.png) no-repeat center center;
+	background-size: 16px 16px;
+}
+
+.proInfo__list {
+	background-color: #F5F5F5;
+}
+
+.proInfo__item {
+	height: 70px;
+	padding-right: 15px;
+	position: relative;
+}
+
+.proInfo__proImg {
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	left: 15px;
+	top: 10px;
+}
+
+.proInfo__infoBox {
+	padding-left: 75px;
+	padding-top: 10px;
+}
+
+.proInfo__proTitle,
+.proInfo__proSku,
+.proInfo__proPriceBox {
+	height: 12px;
+	font-size: 12px;
+	line-height: 12px;
+	color: #222;
+	padding-bottom: 6px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.proInfo__proSku {
+	color: #999;
+}
+
+.proInfo__proPrice {
+	height: 14px;
+	font-size: 14px;
+	color: #F02804;
+	line-height: 14px;
+	padding: 0;
+}
+
+.proInfo__proNum {
+	font-size: 12px;
+	color: #222;
+	line-height: 14px;
+	display: block;
+	float: right;
+}
+
+.drawbackInfo {}
+
+.infoItem {
+	width: 100%;
+	height: 44px;
+	margin-bottom: 10px;
+	box-sizing: border-box;
+	padding: 0 15px;
+	background-color: #fff;
+	position: relative;
+	line-height: 44px;
+}
+
+.noMargin {
+	margin-bottom: 0;
+}
+
+.infoItem__title {
+	height: 100%;
+	font-size: 14px;
+	color: #222;
+	position: absolute;
+	top: 0;
+	left: 15px;
+}
+
+.infoItem__main {
+	height: 100%;
+	padding-left: 130px;
+	font-size: 14px;
+	color: #222;
+	overflow: hidden;
+	position: relative;
+}
+
+.servicetype__sel {
+	-webkit-appearance: initial;
+	height: 100%;
+	width: 100%;
+	box-sizing: border-box;
+	border: none;
+	font-size: 14px;
+	color: #333;
+	background: url(../../img/icon/Triangle2-bot@3x-min.png) no-repeat right center;
+	background-size: 12px 12px;
+}
+
+.infoItem__NumDec,
+.infoItem__NumAdd {
+	width: 24px;
+	height: 24px;
+	position: absolute;
+	top: 10px;
+}
+
+.infoItem__NumDec {
+	left: 130px;
+}
+
+.infoItem__NumAdd {
+	left: 215px;
+}
+
+.infoItem__NumShow {
+	width: 50px;
+	height: 24px;
+	padding: 0;
+	text-align: center;
+	background-color: #F5F5F5;
+	border: none;
+	font-size: 12px;
+	position: absolute;
+	top: 10px;
+	left: 160px;
+}
+
+.infoItem__symbols {
+	display: block;
+	height: 100%;
+	position: absolute;
+	left: 130px;
+	top: 0;
+	margin-top: 1px;
+}
+
+.infoItem__loan {
+	height: 100%;
+	width: 100%;
+	padding-left: 14px;
+	font-size: 14px;
+}
+
+.explain {
+	padding: 0 15px;
+	margin-bottom: 10px;
+	font-size: 12px;
+	color: #999;
+	line-height: 32px;
+}
+
+.reason {
+	margin-bottom: 15px;
+	background-color: #fff;
+}
+
+.reason__item {
+	height: 44px;
+	padding: 0 15px;
+	line-height: 44px;
+	position: relative;
+}
+
+.reason__item:first-child:after {
+	content: '';
+	display: block;
+	width: 100%;
+	border-bottom: 1px solid #e9e9e9;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	transform: scaleY(0.5);
+	-webkit-transform: scaleY(0.5);
+}
+
+.reason__title {
+	height: 100%;
+	font-size: 14px;
+	color: #222;
+	position: absolute;
+	top: 0;
+	left: 15px;
+}
+
+.mark {
+	color: #F02804;
+	font-weight: bolder;
+}
+
+.reason__selBox {
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+	padding-left: 80px;
+}
+
+.reason__select {
+	-webkit-appearance: initial;
+	height: 100%;
+	width: 100%;
+	box-sizing: border-box;
+	border: none;
+	font-size: 14px;
+	color: #333;
+	background: url(../../img/icon/Triangle2-bot@3x-min.png) no-repeat right center;
+	background-size: 12px 12px;
+}
+
+.reason__input {
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+	padding-left: 80px;
+}
+
+.formBox__fileBox {
+	height: 80px;
+	margin: 15px 15px 0;
+}
+.formBox__PicListBox {
+	height: 80px;
+	float: left;
+}
+.formBox__PicBox {
+	width: 80px;
+	height: 80px;
+	float: left;
+	padding-right: 12px;
+	position: relative;
+}
+.formBox__PicMain {
+	width: 80px;
+	height: 80px;
+}
+.formBox__PicDel {
+	height: 20px;
+	position: absolute;
+	top: -5px;
+	right: 5px;
+}
+.formBox__FileBox {
+	width: 80px;
+	height: 80px;
+	background: url(../../img/icon/refund-min.png) no-repeat center center;
+	background-size: 80px 80px;
+	float: left;
+} 
+.formBox__File {
+	width: 70px;
+	height: 70px;
+	margin: 5px;
+	filter:alpha(opacity=0); 
+	-moz-opacity:0; 
+	opacity:0;
+} 
+.formBox__submitBox {
+	width: 100%;
+	margin-top: 30px;
+	margin-bottom: 20px;
+	padding: 0 15px;
+	box-sizing: border-box;
+}
+.formBox__submit {
+	width: 100%;
+	height: 40px;
+	background-color: #f02804;
+	box-sizing: border-box;
+	border: none;border-radius: 2px;
+	font-size: 14px;
+	color: #FFFFFF;
+}
+.formBox__submit:active {
+	opacity: 0.8;	
+}
+
+
+.loadingBg {
+	position: fixed;
+	top: 40px;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	display: none;
+}
+
+.loadingBg__Box {
+	width: 100%;
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	margin-top: -60px;
+}
+
+.loadingBg__img {
+	width: 40px;
+	height: 40px;
+	position: static;
+	margin-top: 0;
+	margin-left: 0;
+}
+
+.loadingBg__text {
+	padding-top: 10px;
+	font-size: 14px;
+	color: #d4d4d4;
+}

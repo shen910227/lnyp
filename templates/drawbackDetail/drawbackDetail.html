@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<script src="../../plugin/dataStatistics.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../plugin/md5.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../plugin/aide.js?v=201610170912" async></script>
+		<script src="../../plugin/app.js?v=201609181415" async></script>
+		<script src="drawbackDetail.js?v=201609281717" async></script>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width = device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<meta name="msapplication-tap-highlight" content="no" />
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1" />
+		<meta content="telephone=no" name="format-detection" />
+		<title>退款详情</title>
+		<link rel="stylesheet" type="text/css" href="../../public-style/style.css?v=201610170912" />
+		<link rel="stylesheet" type="text/css" href="drawbackDetail.css?v=201609011717" />
+	</head>
+
+	<body>
+		<header class="headerPub">
+			<img class="back-but" src="../../img/icon/icon_back@3x.png" />
+			<p class="headerPub__title">退款详情</p>
+		</header>
+		<section class="status">
+			<div class="status__titleBox">
+				<img class="status__img" src="../../img/icon/topbar_help.png" />
+				<h3 class="status__title"></h3>
+			</div>
+			<p class="status__loan">退款金额：<span class="status__total"></span></p>
+			<p class="status__time"><span class="status__timeType"></span><span class="status__backTime"></span></p>
+		</section>
+		<section class="logistical">
+			<p class="logistical__title">退货物流</p>
+			<p class="logistical__main"></p>
+			<!--<img class="logistical__img" src="../../img/icon/Triangle1@3x.png" />-->
+		</section>
+		<section class="infoShow">
+			<div class="infoShow__item">
+				<p class="infoShow__title">退款类型</p>
+				<p class="infoShow__main" id="type"></p>
+			</div>
+			<div class="infoShow__item">
+				<p class="infoShow__title">退款原因</p>
+				<p class="infoShow__main" id="reason"></p>
+			</div>
+			<div class="infoShow__explain">
+				<p class="infoShow__explainT">留言</p>
+				<p class="infoShow__explainM" id="explain"></p>
+			</div>
+		</section>
+		<section class="infoDetail">
+			<div class="infoDetail__item">
+				<p class="infoDetail__title">订单号:</p>
+				<p class="infoDetail__main" id="orderNo"></p>
+			</div>
+			<div class="infoDetail__item">
+				<p class="infoDetail__title">交易订单号:</p>
+				<p class="infoDetail__main" id="dealNo"></p>
+			</div>
+			<div class="infoDetail__item">
+				<p class="infoDetail__title">退款编号:</p>
+				<p class="infoDetail__main" id="drawbackNo"></p>
+			</div>
+		</section>
+	</body>
+
+</html>

@@ -1,0 +1,8 @@
+CACHE MANIFEST
+# manifest="index.appcache"
+# 2016-5-25 v1.0.7
+CACHE:
+plugin/aide.js
+index.js
+NETWORK:
+*

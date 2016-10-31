@@ -1,0 +1,118 @@
+﻿<!doctype html>
+<html lang="zh-cn">
+
+	<head>
+		<script src="../../plugin/dataStatistics.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../plugin/aide.js?v=201610170912" async></script>
+		<script src="../../plugin/app.js?v=201609181415" async></script>
+		<script src="orderCenter.js?v=201609271143" async></script>
+		<meta charset="utf-8">
+		<meta name="viewport" content="height = device-height, width = device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1" />
+		<title>订单中心</title>
+		<link rel="stylesheet" type="text/css" href="../../public-style/style.css?v=201610170912" />
+		<link rel="stylesheet" type="text/css" href="orderCenter.css?v=201609271142" />
+		<link rel="prefetch" href="../../img/icon/tabs_completed_selceted@3x-min.png" />
+	</head>
+
+	<body>
+		<header class="back-tit">
+			<img class="back-but" src="../../img/icon/icon_back@3x.png" />订单中心
+		</header>
+
+		<section id="userdata" class="ban">
+			<div class="user">
+				<img class="img" />
+				<p att='storeName'></p>
+				<img class="gotpShop" src="../../img/icon/Triangle1FFF@3x.png" />
+			</div>
+			<div class="buts show">
+				<button id="show-login">
+					登录
+				</button>
+				<button id="show-rig">
+					注册
+				</button>
+			</div>
+		</section>
+
+		<section class="men">
+			<div class="entry border-linear-bottom">
+				我的订单
+				<a class="gotoMyOrder" href="javascript:void(0);">
+					<span style="vertical-align: middle;">查看所有</span>
+					<img src="../../img/icon/Triangle1@3x.png" /></a>
+			</div>
+			<div class="box">
+				<div type='0'>
+					<div>
+						<img src="../../img/order-nav/tabs_pay@3x.png" />
+						<div class="orderCount"></div>
+					</div>
+					待付款
+				</div>
+				<div type='1'>
+					<div>
+						<img src="../../img/order-nav/tabs_send_goods@3x.png" />
+						<div class="orderCount"></div>
+					</div>
+					待发货
+				</div>
+				<div type='2'>
+					<div>
+						<img src="../../img/order-nav/tabs_received_goods@3x.png" />
+						<div class="orderCount"></div>
+					</div>
+					待收货
+				</div>
+				<div type='3'>
+					<div>
+						<img src="../../img/order-nav/tabs_completed@3x.png" />
+						<div class="orderCount"></div>
+					</div>
+					已完成
+				</div>
+				<div type='4'>
+					<div>
+						<img src="../../img/order-nav/tabs_refund@3x.png" />
+						<div class="orderCount"></div>
+					</div>
+					退款
+				</div>
+			</div>
+		</section>
+
+		<section class="nav">
+			<!--<div id="shopCartBtn" class="border-linear-right">
+					<img src="../../img/modu-nav/lndent_shoppingcar@3x.png" /> 购物车
+				</div>-->
+			<div class="nav__box" id="address">
+				<img class="nav__img" src="../../img/modu-nav/icon_Location@3x.png" />
+				<p class="nav__txt">收货地址</p>
+				<img class="nav__icon" src="../../img/icon/Triangle1@3x.png">
+			</div>
+			<div class="nav__box" id='pain'>
+				<img class="nav__img" src="../../img/modu-nav/my_liquan-min.png" />
+				<p class="nav__txt">礼品券</p>
+				<img class="nav__icon" src="../../img/icon/Triangle1@3x.png">
+			</div>
+			<div class="nav__box" id='coupon'>
+				<img class="nav__img" src="../../img/modu-nav/lndent_discount_coupon@3x.png" />
+				<p class="nav__txt">优惠券</p>
+				<img class="nav__icon" src="../../img/icon/Triangle1@3x.png">
+			</div>
+		</section>
+		<div class="menuBox__item">退出登录</div>
+		<section class="hide" id="logout">
+			<div class="aside__box">
+				<div class="logout__title">是否确定退出登录状态</div>
+				<div class="logout__bottom">
+					<button class="logout__yes">确定</button>
+					<button class="logout__no">取消</button>
+				</div>
+			</div>
+		</section>
+	</body>
+
+</html>

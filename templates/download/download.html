@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html>
+
+	<head>
+		<script src="../../plugin/dataStatistics.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../plugin/aide.js?v=201610170912" async></script>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="height=device-height,width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+		<meta content="telephone=no" name="format-detection" />
+		<meta name="apple-touch-fullscreen" content="yes" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<script type="text/javascript" src="http://pingjs.qq.com/h5/stats.js?v=201609011717" name="MTAH5" sid="500053852"></script>
+		<title>岭南优品APP下载</title>
+		<link rel="stylesheet" type="text/css" href="download.css?v=201609011717"/>
+	</head>
+
+	<body>
+		<aside id="loadingDiv" style="display:none">
+			<img src="../../img/icon/loading.gif" />
+		</aside>
+
+		<div class="download_main"></div>
+		<header id="comm_hd" style=" display:none;">
+			<nav id="comm_nav" class="left" style=" display:none;">
+				<ul id="nav_ul">
+					<li class="nav_li left">
+						<a href="javascript:history.back(-1);" class="nav_a nav_current">返回</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+
+		<section>
+			<div id="android" onclick="downloadAndroidApp();"></div>
+			<div id="ios" ontouchstart="downloadIOSApp();"></div>
+			<div style="width:100%;position:relative;display:inline;">
+				<img src="../../img/download/updateLNAppNew.png" style="width:100%;" />
+			</div>
+		</section>
+		<div class="downloadAppSafari">
+		</div>
+	</body>
+	
+	<script type="text/javascript">
+		function isWeixin() { //微信环境
+			return navigator.userAgent.toLowerCase().indexOf("micromessenger") != -1 ? true : false;
+		}
+		function downloadAndroidApp() {
+			if(isWeixin()) { //微信环境
+				document.getElementsByClassName('downloadAppSafari')[0].className = 'downloadAppSafari isdownload_android';
+				document.getElementsByClassName('downloadAppSafari')[0].style.display = 'block';
+			} else { //正常下载环境
+				location.href = "http://image.vpclub.cn/upload/100000058/lnyp_Android_2.1.1.apk?v=001";
+			}
+		}
+
+		function downloadIOSApp() {
+			if(isWeixin()) { //微信环境
+				document.getElementsByClassName('downloadAppSafari')[0].className = 'downloadAppSafari isdownload_ios';
+				document.getElementsByClassName('downloadAppSafari')[0].style.display = 'block';
+			} else { //正常下载环境
+				//document.getElementById('loadingDiv').style.display = 'block';
+				location.href = "https://itunes.apple.com/us/app/ling-nan-you-pin/id1069609219?l=zh&ls=1&mt=8"; //"itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/ul123dr/lnyp/master/lnyp_iOS_1.0.1.plist";
+			}
+		}
+
+		onload = function() {
+			var _and = document.getElementById('android'),
+				_ios = document.getElementById('ios');
+			_and.style.top = (document.body.clientHeight * 0.47) + 'px';
+			_ios.style.top = (document.body.clientHeight * 0.47) + 'px';
+			_and.style.height = (document.body.clientHeight * 0.057) + 'px';
+			_ios.style.height = (document.body.clientHeight * 0.057) + 'px';
+		}
+	</script>
+
+</html>

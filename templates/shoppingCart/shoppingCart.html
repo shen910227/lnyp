@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+
+	<head>
+		<script src="../../plugin/dataStatistics.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../plugin/aide.js?v=201610170912" async></script>
+		<script src="../../plugin/app.js?v=201609181415" async></script>
+		<script src="shoppingCart.js?v=201610170912" async></script>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width = device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1" />
+		<meta content="telephone=no" name="format-detection" />
+		<title>购物车</title>
+		<link rel="stylesheet" type="text/css" href="../../public-style/style.css?v=201610170912"/>
+		<link rel="stylesheet" type="text/css" href="shoppingCart.css?v=201609011717"/>
+		<link rel="prefetch" href="../../img/icon/tabs_completed_selceted@3x-min.png"/>
+	</head>
+
+	<body>
+
+		<header class="back-tit">
+			<img class="back-but" src="../../img/icon/icon_back@3x.png" /> 购物车
+		</header>
+
+		<section id="box" repeat='shop'  class="view">
+
+			<div class="shop">
+				
+				<p>
+					<input evt='shopcheck' class="check" type="checkbox" />
+					<span goto='shop' class="gotoShop">
+						<img class="gotpShopIcon" src='../../img/icon/icon_shop@3x-min.png'/>
+						<param att='shopname' />
+						<!--<img src="../../img/icon/Triangle1@3x.png" />-->
+					</span>
+				</p>
+
+				<div class="pro">
+					<input evt='procheck' class="check" type="checkbox" />
+					<div class="con">
+						<img class="img" />
+						<p att="proTitle">
+							<param att='proname' />
+							<img class="clo" src="../../img/icon/icon_delete@3x.png" />
+						</p>
+						<div>
+							<span att='sku_final'></span>
+							<!--<a>修改</a>-->
+						</div>
+					</div>
+					<footer>
+						价格:￥<span att='price'></span>
+						<div class="count">
+							<button class="red">-</button>
+							<input class="snum" type="tel" value="1"/>
+							<button class="add">+</button>
+						</div>
+					</footer>
+				</div>
+				
+			</div>
+			
+		</section>
+
+		<footer class="cart-fot border-linear-top">
+			<div class="sel"><input class="check" type="checkbox" />全选</div>
+			<p>合计：<span id="countall">￥0</span><span id="yunfeiTip">不含运费</span></p>
+			<div class="but">结算(<span id="pro-count">0</span>)</div>
+		</footer>
+		
+		<section id="select" class="select">
+				<div id="select_box" class="select-box">
+					<div class="select-box__top">
+						<img class="select-box__proPic" url="select-box-pic"/>
+						<h3 class="select-box__proPrice" value='skuPrice'></h3>
+						<p class="select-box__stock" value='skuStock'></p>
+						<img id="closeSelectBox" class="select-box__closeBtn" src="../../img/icon/icon_delete@3x-min.png"/>
+					</div>
+					<div id="select-box__mainBox" class="select-box__mainBox">
+						<div id="select-box__colorBox"></div>
+						<div id="select-box__unitBox"></div>
+						<div id="select-box__packageBox"></div>
+					</div>
+					<div class="select-box__NoBox">
+						<p class="select-box__title">购买数量</p>
+						<img  class="select-box__NoDec" src="../../img/icon/dec-min.png"/>
+						<input class="select-box__NoShow" type="tel" value="1"/>
+						<img class="select-box__NoAdd" src="../../img/icon/add-min.png"/>
+					</div>
+					<button id="btnBuyOrAdd" class="select-box__doType">确 定</button>
+				</div>
+			</section>
+		
+		<aside id="isdel" style="display: none;">
+			<div class="del">
+				<div id="sure-del" class="border-linear-bottom">确定删除该商品</div>
+				<p id="isdel-del">取消</p>
+			</div>
+		</aside>
+	</body>
+
+</html>

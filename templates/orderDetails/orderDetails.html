@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+	<head>
+		<script src="../../plugin/dataStatistics.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../plugin/aide.js?v=201610170912" async></script>
+		<script src="../../plugin/app.js?v=201609181415" async></script>
+		<script src="orderDetails.js?v=201609011717" async></script>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width = device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1" />
+		<meta content="telephone=no" name="format-detection" />
+		<title>订单详情</title>
+		<link rel="stylesheet" type="text/css" href="../../public-style/style.css?v=201610170912" />
+		<link rel="stylesheet" type="text/css" href="orderDetails.css?v=201609011717" />
+	</head>
+
+	<body>
+		<header class="headerPub">
+			<img class="back-but" src="../../img/icon/icon_back@3x.png" />
+			<p class="headerPub__title">订单详情</p>
+		</header>
+		<section class="topInfo">
+			<div class="topInfo__statusBox">状态：<span class="topInfo__status"></span></div>
+			<div class="topInfo__orderNoBox">订单号：<span class="topInfo__orderNo"></span>
+				<!--<button class="topInfo__copyBtn">复制</button>-->
+			</div>
+			<div class="topInfo__comOrderBox">下单时间：<span class="topInfo__comOrderT"></span></div>
+			<div class="topInfo__payOrderBox">付款时间：<span class="topInfo__payOrderT"></span></div>
+		</section>
+		<section class="addressBox">
+			<div class="addressBox__topBox">
+				<img class="addressBox__topImg" src="../../img/modu-nav/icon_Location@3x.png" />
+				<p class="addressBox__topName"></p>
+				<p class="addressBox__topTel"></p>
+			</div>
+			<p class="addressBox__addr"></p>
+		</section>
+
+		<section class="orderMain">
+			<div class="orderMain__top">
+				<img class="orderMain__topIcon" src="../../img/icon/icon_shop@3x-min.png" />
+				<p class="orderMain__topName">
+					<span class="orderMain__name"></span>
+					<!--<img class="orderMain__gotoShop" src="../../img/icon/Triangle1@3x.png"/>-->
+				</p>
+
+			</div>
+			<div class="orderMain__proList" repeat='orderMain__proList'>
+				<div class="orderMain__proItem">
+					<img class="orderMain__proImg" />
+					<div class="orderMain__proInfo">
+						<p class="orderMain__proTitle"></p>
+						<p class="orderMain__proSku"></p>
+						<p class="orderMain__proPrice">
+							<param att="proPrice" />
+							<span class="orderMain__proNum">
+							</span>
+						</p>
+						<div class="proInfo__btnBox">
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--<div class="orderMain__Box" id="orderMain__first">
+				<p class="orderMain__title">发票抬头：</p>
+				<p class="orderMain__text"></p>
+			</div>-->
+			<div class="orderMain__Box">
+				<p class="orderMain__title">用户留言：</p>
+				<p class="orderMain__text"></p>
+			</div>
+		</section>
+
+		<section class="payInfo">
+			<div class="payInfo__item">
+				<p class="payInfo__title">订单总金额（含运费￥<span class="payInfo__freight">￥0.00</span>）</p>
+				<p class="payInfo__main" id="total">￥0.00</p>
+			</div>
+			<div class="payInfo__item">
+				<p class="payInfo__title">优惠券</p>
+				<p class="payInfo__main" id="coupon">-￥0.00</p>
+			</div>
+			<div class="payInfo__item">
+				<p class="payInfo__title">电子券</p>
+				<p class="payInfo__main" id="elcoupon">-￥0.00</p>
+			</div>
+			<div class="payInfo__item">
+				<p class="payInfo__title" id="isPay">实付款</p>
+				<p class="payInfo__mark" id="realPay">￥0.00</p>
+			</div>
+		</section>
+
+		<footer class="footer">
+			<button class="footer__cancel">关闭订单</button>
+			<button class="footer__confirmPay">确认付款</button>
+			<button class="footer__refund">取消订单</button>
+			<button class="footer__urge">催发货</button>
+			<button class="footer__logistical">查看物流</button>
+			<button class="footer__confirmGet">确认收货</button>
+			<!--<button class="footer__afterSales">申请售后</button>-->
+		</footer>
+		<div class="isdelPub" style="display: none;">
+			<div class="delPubBox">
+				<div id="delPubBox__text" class="delPubBox__text"></div>
+				<div class="delPubBox__bottom">
+					<p class="delPubBox__yes">确定</p>
+					<p class="delPubBox__no">取消</p>
+				</div>
+			</div>
+		</div>
+		<aside class="loadingBg">
+			<img class="loadingBg__img" src="../../img/icon/loading.gif" />
+		</aside>
+	</body>
+
+</html>

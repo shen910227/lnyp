@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+	<head>
+		<script src="../../plugin/dataStatistics.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../plugin/aide.js?v=201610170912" async></script>
+		<script src="../../plugin/app.js?v=201609181415" async></script>
+		<script src="addressEdit.js?v=201609011717" async></script>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width = device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1" />
+		<meta content="telephone=no" name="format-detection" />
+		<title>编辑收货地址</title>
+		<link rel="stylesheet" type="text/css" href="../../public-style/style.css?v=201610170912"/>
+		<link rel="stylesheet" type="text/css" href="../../plugin/iosSelectJs/iosSelect.css?v=201609011717"/>
+		<link rel="stylesheet" type="text/css" href="addressEdit.css?v=201609011717"/>
+		<link rel="prefetch" href="../../img/icon/btn_open@3x-min.png" />
+	</head>
+
+	<body>
+
+		<header class="back-tit">
+			<img class="back-but" src="../../img/icon/icon_back@3x.png" /> 编辑收货地址
+		</header>
+
+		<form id="form">
+
+			<section class="box">
+				<div class="inp border-linear-bottom">
+					<input name="receiveUserName" type="text" placeholder="收货人" />
+				</div>
+				<div class="inp border-linear-bottom">
+					<input name="receiveUserTel" type="text" placeholder="手机号码" />
+				</div>
+				<div id="select_contact" class="adr border-linear-bottom">
+					<input type="hidden" name="provicecode" id="contact_province_code" value="" data-provincename="">
+					<input type="hidden" name="citycode" id="contact_city_code" value="" data-cityname="">
+					<input type="hidden" name="deliveryAreacode" id="contact_district_code" value="" data-districtname="">
+					<span id="show_contact">省 / 市 / 区</span>
+					<img src="../../img/icon/Triangle1@3x.png" />
+				</div>
+				<div class="inp border-linear-bottom">
+					<input name="deliveryAddress" type="text" placeholder="小区、街道、门牌等信息" />
+				</div>
+				<div class="def border-linear-bottom">
+					设为默认地址<br />注：每次下单会默认使用该地址
+					<input name="isdefult" type="checkbox" value="1" />
+				</div>
+			</section>
+
+		</form>
+
+		<footer>
+			<button id="but">保存</button>
+		</footer>
+
+		<script src="../../plugin/iosSelectJs/areaData_v2.js?v=201607131400"></script>
+		<script src="../../plugin/iosSelectJs/zepto.js?v=201607131400"></script>
+		<script src="../../plugin/iosSelectJs/iosSelect.js?v=201607131400"></script>
+		<script src="../../plugin/iosSelectJs/iscroll.js?v=201607131400"></script>
+		<script type="text/javascript">
+			onload = function() {
+				initIosSelect();
+			}
+
+			function initIosSelect() {
+				var selectContactDom = $('#select_contact');
+				var showContactDom = $('#show_contact');
+				var contactProvinceCodeDom = $('#contact_province_code');
+				var contactCityCodeDom = $('#contact_city_code');
+				var contactDistrictCodeDom = $('#contact_district_code');
+				selectContactDom.bind('click', function() {
+					var sccode = showContactDom.attr('data-city-code');
+					var scname = showContactDom.attr('data-city-name');
+					var oneLevelId = showContactDom.attr('data-province-code');
+					var twoLevelId = showContactDom.attr('data-city-code');
+					var threeLevelId = showContactDom.attr('data-district-code');
+					var iosSelect = new IosSelect(3, [iosProvinces, iosCitys, iosCountys], {
+						title: '',
+						itemHeight: 35,
+						oneTwoRelation: 1,
+						twoThreeRelation: 1,
+						oneLevelId: oneLevelId,
+						twoLevelId: twoLevelId,
+						threeLevelId: threeLevelId,
+						callback: function(selectOneObj, selectTwoObj, selectThreeObj) {
+
+							contactProvinceCodeDom.val(selectOneObj.id);
+							contactProvinceCodeDom.attr('data-province-name', selectOneObj.value);
+
+							contactCityCodeDom.val(selectTwoObj.id);
+							contactCityCodeDom.attr('data-city-name', selectTwoObj.value);
+
+							contactDistrictCodeDom.val(selectThreeObj.id);
+							contactDistrictCodeDom.attr('data-district-name', selectThreeObj.value);
+
+							showContactDom.attr('data-province-code', selectOneObj.id);
+							showContactDom.attr('data-city-code', selectTwoObj.id);
+							showContactDom.attr('data-district-code', selectThreeObj.id);
+							showContactDom.html(selectOneObj.value + ' ' + selectTwoObj.value + ' ' + selectThreeObj.value);
+						}
+					});
+				});
+			}
+		</script>
+	</body>
+
+</html>

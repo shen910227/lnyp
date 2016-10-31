@@ -1,0 +1,62 @@
+body {
+	background-color: #F2F2F2;
+}
+
+.ban {
+	margin-top: 10px;
+	background-color: #FFFFFF;
+}
+
+.ban> div {
+	height: 150px;
+}
+
+.ban> div> p{
+	margin: 0;
+	height: 70px;
+	line-height: 70px;
+	font-size: 16px;
+	text-align: center;
+}
+
+.ban> div> div{
+	text-align: center;
+	font-size: 18px;
+	color: #F02804;
+}
+
+.ban> div> div> span{
+	font-size: 38px;
+}
+
+.ban> footer {
+	height: 60px;
+}
+
+.ban> footer> div {
+	position: relative;
+	float: left;
+	margin: 10px 0;
+	width: 50%;
+	height: 40px;
+	line-height: 20px;
+	text-align: center;
+	font-size: 12px;
+}
+
+.ban> footer> div> img {
+	display: block;
+	margin: 0 auto;
+	width: 30px;
+}
+
+.tex{
+	margin: 25px 15px;
+	line-height: 20px;
+	font-size: 14px;
+	color: #666666;
+}
+
+.tex> span{
+	color: #333333;
+}

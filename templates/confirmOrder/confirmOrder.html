@@ -1,0 +1,153 @@
+﻿<!DOCTYPE html>
+<html>
+
+	<head>
+		<script src="../../plugin/dataStatistics.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../plugin/aide.js?v=201610170913" async></script>
+		<script src="../../plugin/app.js?v=201609181415" async></script>
+		<script src="confirmOrder.js?v=201610202025" async></script>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width = device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<meta name="msapplication-tap-highlight" content="no" />
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1" />
+		<meta content="telephone=no" name="format-detection" />
+		<title>确认订单</title>
+		<link rel="stylesheet" type="text/css" href="../../public-style/style.css?v=201610170912" />
+		<link rel="stylesheet" type="text/css" href="confirmOrder.css?v=201610202024" />
+	</head>
+
+	<body>
+		<div class="comfirmOrderBox">
+			<header class="headerPub">
+				<img class="back-but" src="../../img/icon/icon_back@3x.png" />
+				<p class="headerPub__title">订单确认</p>
+			</header>
+			<section class="addressBox">
+				<div class="addressBox__iconBox"><img class="addressBox__icon" src="../../img/modu-nav/icon_Location@3x.png" /></div>
+				<div class="addressBox__addressBox">
+					<p class="addressBox__topBox">
+						<span class="addressBox__name"></span>
+						<span class="addressBox__telNum"></span>
+					</p>
+					<p class="addressBox__address"></p>
+				</div>
+				<img class="addressBox__iconNext" src="../../img/icon/Triangle1@3x.png" />
+				<!--<div class="addressBox__noneTip">
+					点击前往设置收货地址
+				</div>-->
+			</section>
+			<section class="proListBox">
+				<div class="proInfoBox">
+					<div class="proInfoBox__shopBox">
+						<img class="proInfoBox__shopIcon" src="../../img/icon/icon_shop@3x-min.png" />
+						<p class="proInfoBox__shopName"></p>
+					</div>
+					<div class="proInfoBox__proList">
+						<div class="proInfoBox__proItem">
+							<img class="proInfoBox__proImg" src='../../img/paid/move1.svg' />
+							<div class="proInfoBox__proInfo">
+								<p class="proInfoBox__proTitle"></p>
+								<p class="proInfoBox__proSku"></p>
+								<p class="proInfoBox__proBottom">
+									￥<span att="price" class="price"></span><span class="proInfoBox__proNum">×<span class="num" att='num'></span></span>
+								</p>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+			</section>
+			<section class="otherPay">
+				<div class="coupon">
+					<div id="coupon__checkbox" class="couponFalse"></div>
+					<div class="coupon__clickBox">
+						<span class="coupon__title">优惠券</span>
+						<span class="coupon__main">加载中...</span>
+						<img class="coupon__icon" src="../../img/icon/Triangle1@3x.png" />
+					</div>
+				</div>
+				<div class="eleCoupons">
+					<div id="eleCoupons__checkbox" class="eleCouponsFalse"></div>
+					<div class="eleCoupons__clickBox">
+						<span class="eleCoupons__title">电子券</span><img class="eleCoupons__help" src="../../img/icon/icon_help.png" />
+						<div class="eleCoupons__inputBox">
+							<span>使用</span>
+							<input class="eleCoupons__input" type="number" value="0" />
+							<span class="eleCoupons__yuan">元</span>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="messageBox">
+				<div class="messageBox__title">用户留言：</div>
+				<div class="messageBox__inputBox">
+					<input class="messageBox__input" type="text" placeholder="对本次交易的留言">
+				</div>
+				<p class="messageBox__tips">海关要求购买跨境商品需提供身份证信息，请填写真实姓名和身份证号，示例：王芳 43072619910116311</p>
+			</section>
+			<section class="payInfo">
+				<table class="payInfo__table" border="0" cellspacing="0" cellpadding="0">
+					<tr class="payInfo__tr">
+						<td class="payInfo__title">订单总金额（含运费￥<span class="yunfei"></span>）</td>
+						<td class="payInfo__main"></td>
+					</tr>
+					<tr class="payInfo__tr" style="display: none;">
+						<td class="payInfo__title">优惠券</td>
+						<td class="payInfo__main"><span class="payInfo__coupon">-￥0.00</span></td>
+					</tr>
+				</table>
+			</section>
+			<footer class="payFooter">
+				<div class="payFooter__realPayBox">实付款:<span class="payFooter__realPay"></span></div>
+				<button class="payFooter__btn">提交</button>
+			</footer>
+		</div>
+
+		<aside class="loadingBg">
+			<div class="loadingBg__Box">
+				<img class="loadingBg__img" src="../../img/icon/loading.gif" />
+				<p class="loadingBg__text">加载中...</p>
+			</div>
+		</aside>
+		<aside class="isAddAddr">
+			<div class="aside__box">
+				<div class="isAddAddr__title">点击确定前往设置收货地址</div>
+				<div class="isAddAddr__YN">
+					<div class="isAddAddr__Y">确定</div>
+					<div class="isAddAddr__N">取消</div>
+				</div>
+			</div>
+		</aside>
+		<aside class="eleCouponsPayBox">
+			<div class="eleCouponsPay">
+				<div class="eleCouponsPay__top">
+					电子券支付提示 
+					<button class="eleCouponsPay__btn" disabled>确定</button>
+				</div>
+				<div class="eleCouponsPay__main">
+					<p class="eleCouponsPay__txt">该过程中您会收到中国移动的短信，请您确认是否使用电子券支付。</p>
+					<p class="eleCouponsPay__txt">接收并回复移动短信的时间为3分钟。</p>
+					<p class="eleCouponsPay__txt">3分钟内短信回复Y，则支付成功；3分钟内未回复或者未收到短信，则支付失败。支付失败后，不扣取电子券费用，订单可以其他支付方式继续支付。</p>
+					<p class="eleCouponsPay__txt">接收短信的过程中，请勿强制退出该页面。如果因意外原因退出了程序，请重新登录并到“我的”-“待支付订单”中查询该笔订单。</p>
+					<div class="eleCouponsPay__time">
+						<span class="eleCouponsPay__timeT">等待时间还剩</span><span class="eleCouponsPay__mark">03</span>分<span class="eleCouponsPay__mark">00</span>秒
+					</div>
+					<div class="eleCouponsPay__success">
+						<span>电子券支付成功</span>
+						<img class="eleCouponsPay__payResultImg" src="../../img/icon/zhifuchenggong.png" />
+					</div>
+					<div class="eleCouponsPay__fail">
+						<span>电子券支付失败</span>
+						<img class="eleCouponsPay__payResultImg" src="../../img/icon/zhifushibai.png" />
+					</div>
+				</div>
+			</div>
+		</aside>
+	</body>
+
+</html>

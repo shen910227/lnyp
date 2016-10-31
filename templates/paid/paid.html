@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+
+	<head>
+		<script src="../../plugin/dataStatistics.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../plugin/aide.js?v=201610170912" async></script>
+		<script src="../../plugin/app.js?v=201609181415" async></script>
+		<script src="paid.js?v=201609271142" async></script>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width = device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1" />
+		<meta content="telephone=no" name="format-detection" />
+		<title>岭南优品礼品券</title>
+		<link rel="stylesheet" type="text/css" href="../../public-style/style.css?v=201610170912"/>
+		<link rel="stylesheet" type="text/css" href="paid.css?v=201609011717"/>
+	</head>
+
+	<body>
+		
+		<header class="back-tit">
+			<img class="back-butII" src="../../img/icon/icon_back@3x.png" /><span id="paid-tit">岭南优品礼品券</span>
+		</header>
+		
+		<section repeat='paid' id="paidbox" class="paidList" style="display: none;">
+
+
+			<div>
+				<header>
+					<span att='Type_Name'></span>
+					<div><param att="Effective_End_Time"/>前兑换有效</div>
+				</header>
+				<div>
+					<img src="../../img/icon/move2.svg"/>
+					<span>广东移动</span>
+					<strong att='Porduct_Name'></strong>
+					<div att='tex'></div>
+				</div>
+			</div>
+
+
+		</section>
+		
+		<section id="ticketno" style="display: none;">
+			
+			<div class="noTicketDiv">
+				<img class="noTicketImg" src="../../img/icon/no_prompt.svg" />
+				<p class="noTicketText">暂无可用礼品券</p>
+				<!--<button class="noTicketButton">去领券</button>-->
+			</div>
+
+			<div class="noTicketExp">
+				您可以在支持岭南优品礼品券的公众号、应用程序、线下店铺获得流量红包券，放入岭南优品礼品券保存和管理。
+			</div>
+			
+		</section>
+	</body>
+</html>

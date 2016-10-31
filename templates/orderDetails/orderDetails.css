@@ -1,0 +1,308 @@
+body {
+	background-color: #eee;
+}
+
+.topInfo {
+	margin-top: 40px;
+	margin-bottom: 10px;
+	padding: 0 15px 6px;
+	background-color: #fff;
+}
+
+.topInfo__statusBox {
+	height: 34px;
+	font-size: 14px;
+	color: #222;
+	line-height: 38px;
+}
+
+.topInfo__status {
+	color: #F02804;
+}
+
+.topInfo__orderNoBox,
+.topInfo__comOrderBox,
+.topInfo__payOrderBox {
+	height: 22px;
+	font-size: 12px;
+	color: #333;
+	line-height: 22px;
+}
+
+
+/*.topInfo__copyBtn {
+	width: 40px;
+	height: 18px;
+	background-color: #fff;
+	border: 1px solid #d8d8d8;
+	border-radius: 2px;
+	font-size: 12px;
+	color: #999;
+	float: right;
+}*/
+
+.addressBox {
+	margin-bottom: 10px;
+	padding: 10px 0;
+	background-color: #fff;
+}
+
+.addressBox__topBox {
+	height: 24px;
+	padding-bottom: 4px;
+	line-height: 24px;
+	font-size: 14px;
+	color: #333;
+	position: relative;
+}
+
+.addressBox__topImg {
+	height: 24px;
+	position: absolute;
+	left: 15px;
+	top: 0;
+}
+
+.addressBox__topName {
+	padding-left: 44px;
+}
+
+.addressBox__topName,
+.addressBox__topTel {
+	display: inline-block;
+	padding-right: 6px;
+}
+
+.addressBox__addr {
+	padding: 0 15px 4px 44px;
+	font-size: 12px;
+	color: #999;
+}
+
+.orderMain {
+	margin-bottom: 10px;
+	background-color: #fff;
+}
+
+.orderMain__top {
+	height: 44px;
+	font-size: 12px;
+	color: #222222;
+	line-height: 44px;
+	position: relative;
+}
+
+.orderMain__topIcon {
+	width: 18px;
+	height: 18px;
+	position: absolute;
+	left: 15px;
+	top: 13px;
+}
+
+.orderMain__topName {
+	padding-left: 37px;
+	position: relative;
+}
+
+.orderMain__gotoShop {
+	height: 10px;
+	margin-left: 4px;
+	margin-bottom: 2px;
+}
+
+.orderMain__proList {
+	background-color: #F5F5F5;
+}
+
+.orderMain__proItem {
+	min-height: 70px;
+	padding-right: 15px;
+	position: relative;
+}
+
+.orderMain__proImg {
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	left: 15px;
+	top: 10px;
+}
+
+.orderMain__proInfo {
+	padding-left: 75px;
+	padding-top: 10px;
+}
+
+.orderMain__proTitle,
+.orderMain__proSku,
+.orderMain__proPrice {
+	height: 12px;
+	font-size: 12px;
+	line-height: 12px;
+	color: #222;
+	padding-bottom: 6px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.orderMain__proSku {
+	color: #999;
+}
+
+.orderMain__proPrice {
+	height: 14px;
+	font-size: 14px;
+	color: #F02804;
+	line-height: 14px;
+	padding: 0;
+}
+
+.orderMain__proNum {
+	font-size: 12px;
+	color: #222;
+	line-height: 14px;
+	display: block;
+	float: right;
+}
+
+.proInfo__btnBox {
+	width: 100%;
+	position: relative;
+}
+
+.proInfo__tips {
+	font-size: 12px;
+	color: #999;
+	line-height: 12px;
+	height: 32px;
+	padding: 5px 0 10px;
+}
+
+.proInfo__btn {
+	width: 70px;
+	height: 30px;
+	background-color: #fff;
+	border: 1px solid #d8d8d8;
+	border-radius: 2px;
+	font-size: 14px;
+	color: #666;
+	position: absolute;
+	top: 7px;
+	right: 0;
+}
+
+.orderMain__Box {
+	min-height: 44px;
+	padding: 12px 15px 12px 0;
+	box-sizing: border-box;
+	font-size: 14px;
+	position: relative;
+}
+
+
+/*#orderMain__first:after {
+	content: '';
+	display: block;
+	width: 100%;
+	border-bottom: 1px solid #eee;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	transform: scaleY(0.5);
+	-webkit-transform: scaleY(0.5);
+}
+#orderMain__first {
+	display: none;
+}*/
+
+.orderMain__title {
+	height: 20px;
+	color: #333;
+	line-height: 20px;
+	position: absolute;
+	left: 15px;
+	top: 12px;
+}
+
+.orderMain__text {
+	padding-left: 86px;
+	line-height: 20px;
+	color: #999;
+	word-break: break-all;
+}
+
+.payInfo {
+	margin-bottom: 60px;
+	padding: 8px 15px;
+	background: #fff;
+}
+
+.payInfo__item {
+	font-size: 14px;
+	line-height: 30px;
+	overflow: hidden;
+}
+
+.payInfo__title {
+	color: #222;
+	float: left;
+}
+
+.payInfo__main {
+	color: #333;
+	float: right;
+}
+
+.payInfo__mark {
+	color: #F02804;
+	float: right;
+}
+
+.footer {
+	width: 100%;
+	background-color: #fff;
+	text-align: center;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+}
+
+.footer:after {
+	content: '';
+	display: block;
+	width: 100%;
+	border-bottom: 1px solid #d8d8d8;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform: scaleY(0.5);
+	-webkit-transform: scaleY(0.5);
+}
+
+.footer__cancel,
+.footer__confirmPay,
+.footer__refund,
+.footer__urge,
+.footer__logistical,
+.footer__confirmGet,
+.footer__afterSales {
+	width: 27%;
+	height: 30px;
+	box-sizing: border-box;
+	margin: 10px 15px;
+	background-color: transparent;
+	border: 1px solid #d8d8d8;
+	border-radius: 2px;
+	font-size: 14px;
+	color: #666;
+	display: none;
+}
+
+.footer__confirmPay,
+.footer__confirmGet {
+	border: none;
+	background-color: #F02804;
+	color: #fff;
+}

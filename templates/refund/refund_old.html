@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="../../plugin/dataStatistics.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../plugin/aide.js?v=201610170912" async></script>
+		<script src="../../plugin/app.js?v=201609181415" async></script>
+		<script src="refund_old.js?v=201609011717" async></script>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width = device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<meta name="msapplication-tap-highlight" content="no" />
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1" />
+		<meta content="telephone=no" name="format-detection" />
+		<title>申请退款</title>
+		<link rel="stylesheet" type="text/css" href="../../public-style/style.css?v=201610170912"/>
+		<link rel="stylesheet" type="text/css" href="refund_old.css?v=201609011717"/>
+	</head>
+	<body>
+		<header class="headerPub">
+			<img class="back-but" src="../../img/icon/icon_back@3x.png"/>
+			<p class="headerPub__title">申请退款</p>
+		</header>
+		<section class="formBox">
+			<form class="formBox__main">
+				<div class="formBox__itemBox" id="RefundType">
+					<label class="formBox__label">退款原因</label>
+					<select class="formBox__select" name="drawback_reason">
+						<option></option>
+						<option>退运费</option>
+						<option>收到商品受损</option>
+						<option>商品错发/漏发</option>
+						<option>商品需要维修</option>
+						<option>发票问题</option>
+						<option>收到商品与描述不符</option>
+						<option>商品质量问题</option>
+						<option>未按约定时间发货</option>
+						<option>协商一致退款</option>
+					</select>
+				</div>
+				<div class="formBox__itemBox" id="note">
+					<label class="formBox__label">手机号码</label>
+					<input class="formBox__input" type="tel" name="mobile" />
+				</div>
+				<div class="formBox__itemBox" id="note">
+					<label class="formBox__label">银行卡号</label>
+					<input class="formBox__input" type="tel" name="bankno" />
+				</div>
+				<div class="formBox__itemBox" id="RefundType">
+					<label class="formBox__label" >银行卡信息</label>
+					<select class="formBox__select" name="bankname">
+						<option></option>
+						<option>中国银行</option>
+						<option>中国工商银行</option>
+						<option>中国建设银行</option>
+						<option>中国农业银行</option>
+						<option>交通银行</option>
+						<option>招商银行</option>
+						<option>中信银行</option>
+						<option>中国民生银行</option>
+						<option>中国兴业银行</option>
+						<option>上海浦东发展银行</option>
+						<option>中国光大银行</option>
+						<option>平安银行</option>
+						<option>华夏银行</option>
+						<option>深圳发展银行</option>
+						<option>中国邮政储蓄</option>
+					</select>
+				</div>
+				<div class="formBox__itemBox" id="note">
+					<label class="formBox__label">支行信息</label>
+					<input class="formBox__input" type="text" name="bank_branch" />
+				</div>
+				<div class="formBox__itemBox" id="note">
+					<label class="formBox__label">姓名</label>
+					<input class="formBox__input" type="text" name="username" />
+				</div>
+				<div class="formBox__itemBox" id="note">
+					<label class="formBox__label">商品单号</label>
+					<input class="formBox__input" type="text" name="orderno" readonly="readonly" />
+				</div>
+				
+				<div class="formBox__fileBox">
+					<div class="formBox__PicListBox">
+					</div>
+					<div class="formBox__FileBox">
+						<input class="formBox__File" type="file" multiple='true'/>	
+					</div>
+				</div>
+				
+				
+				<div class="formBox__submitBox">
+					<input class="formBox__submit" type="button" value="提交申请"/>
+				</div>
+				
+				
+				
+			</form>
+			
+		</section>
+		<aside class="loadingBg">
+			<div class="loadingBg__Box">
+				<img class="loadingBg__img" src="../../img/icon/loading.gif" />
+				<p class="loadingBg__text">图片上传中...</p>
+			</div>
+		</aside>
+		<aside class="tips">
+			<div class="tips__box">
+				<div class="tips__main"></div>
+				<p class="tips__yes">确定</p>
+			</div>
+		</aside>
+	</body>
+</html>

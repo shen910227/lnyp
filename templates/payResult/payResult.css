@@ -1,0 +1,154 @@
+/*默认样式重置*/
+
+body,
+header,
+div,
+p,
+button {
+	padding: 0;
+	margin: 0;
+	font-family: "microsoft yahei";
+}
+
+img {
+	border: none;
+	vertical-align: middle;
+}
+
+button {
+	cursor: pointer;
+	-webkit-appearance: none;
+	outline: none;
+	border: none;
+}
+
+.header {
+	width: 100%;
+	height: 40px;
+	background-color: #fff;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+body {
+	background-color: #eee;
+	font-family: "microsoft yahei" arial;
+}
+
+.header__back {
+	height: 18px;
+	padding: 11px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.header__title {
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	font-size: 14px;
+	color: #222;
+}
+
+.paystatu {
+	width: 100%;
+	height: 200px;
+	box-sizing: border-box;
+	margin-top: 40px;
+	padding-top: 30px;
+}
+
+.paystatu__img {
+	width: 90px;
+	height: 90px;
+	display: block;
+	margin: 0 auto;
+}
+
+.paystatu__txt {
+	font-size: 16px;
+	color: #000;
+	text-align: center;
+	line-height: 60px;
+}
+
+.orderInfo {
+	width: 100%;
+	box-sizing: border-box;
+	text-align: center;
+}
+
+.orderInfo__No {
+	padding: 0 15px;
+	background-color: #fff;
+	font-size: 14px;
+	color: #000;
+	/*font-weight: bolder;*/
+	line-height: 50px;
+	text-align: left;
+}
+
+.line {
+	position: relative;
+}
+
+.line:after {
+	content: '';
+	display: block;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	border-bottom: 1px solid #d8d8d8;
+	transform: scaleY(0.5);
+	-webkit-transform: scaleY(0.5);
+}
+
+.orderInfo__logistical {
+	padding: 14px 15px;
+	background-color: #fff;
+	font-size: 14px;
+	color: #000;
+	line-height: 20px;
+	display: none;
+	text-align: left;
+}
+
+.orderInfo__NT {
+	overflow: hidden;
+	padding-bottom: 12px;
+}
+
+.orderInfo__name {
+	float: left;
+	padding-right: 20px;
+}
+
+.orderInfo__Tel {
+	float: left;
+}
+
+.orderInfo__addr {
+	
+}
+
+.orderInfo__total {
+	padding: 0 15px;
+	background-color: #fff;
+	font-size: 14px;
+	color: #000;
+	line-height: 50px;
+	margin-bottom: 30px;
+	text-align: left;
+}
+
+.btn {
+	width: 100px;
+	height: 30px;
+	background-color: #fff;
+	font-size: 14px;
+	color: #666;
+	border-radius: 2px;
+}

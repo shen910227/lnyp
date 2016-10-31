@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+	<head>
+		<script src="../../plugin/dataStatistics.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../plugin/aide.js?v=201610170912" async></script>
+		<script src="../../plugin/app.js?v=201609181415" async></script>
+		<script src="address.js?v=201609011717" async></script>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width = device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1" />
+		<meta content="telephone=no" name="format-detection" />
+		<title>收货地址</title>
+		<link rel="stylesheet" type="text/css" href="../../public-style/style.css?v=201610170912"/>
+		<link rel="stylesheet" type="text/css" href="address.css?v=201609011717"/>
+	</head>
+
+	<body>
+
+		<header class="back-tit">
+			<img class="back-but" src="../../img/icon/icon_back@3x.png" /> 收货地址
+		</header>
+
+		<section repeat='addrlist' id="list" class="box">
+			<div class="adr">
+				<div class="border-linear-bottom">
+					<p>
+						<span att='name'></span>
+						<param att='tel' />
+					</p>
+					<param att='addr' />
+				</div>
+				<p>
+					<input att='ischeck' class="check" name="def" type="radio" /> 设为默认
+					<span goto='del'>
+						<img src="../../img/icon/Trash@3x-min.png"/>
+					<span>删除</span>
+					</span>
+					<span goto='edit'>
+						<img src="../../img/icon/icon_bianji@3x-min.png"/>
+						<span>编辑</span>
+					</span>
+				</p>
+			</div>
+		</section>
+
+		<footer class="addrFooter">添加新地址</footer>
+
+		<aside id="isdel" style="display: none;">
+			<div class="del">
+				<div id="sure-del" class="border-linear-bottom">确定删除该地址</div>
+				<p id="cancale-del">取消</p>
+			</div>
+		</aside>
+	</body>
+
+</html>

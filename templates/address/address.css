@@ -1,0 +1,167 @@
+body {
+	padding-top: 45px;
+	background-color: #F2F2F3;
+}
+
+.back-tit {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+.box {
+	margin-bottom: 50px;
+}
+.adr {
+	/* padding: 0 15px; */
+	margin-top: 10px;
+	background-color: #FFFFFF;
+}
+
+.adr> div {
+	/* height: 70px; */
+	padding: 0 15px 15px;
+	font-size: 14px;
+	color: #999999;
+}
+
+.adr> div> p {
+	margin: 0;
+	height: 40px;
+	line-height: 40px;
+	font-size: 14px;
+	color: #222;
+}
+
+.adr> div> p >span {
+	margin-right: 20px;
+}
+.adr> p {
+	margin: 0;
+	height: 40px;
+	padding: 0 15px;
+	line-height: 40px;
+	font-size: 14px;
+}
+
+.adr> p> span {
+	float: right;
+	margin-left: 30px;
+	position: relative;
+}
+
+.adr> p> span:active {
+	opacity: .7;
+}
+
+.adr> p> span> img {
+	width: 16px;
+	position: absolute;
+	top: 12px;
+	left: 0;
+}
+.adr> p> span>span {
+	padding-left: 20px;
+}
+
+.check {
+	width: 18px;
+	height: 18px;
+	margin: 0;
+	margin-right: 2px;
+	vertical-align: middle;
+	background-image: url(../../img/icon/btn_weixuan@3x.png);
+	background-repeat: no-repeat;
+	background-size: 18px 18px;
+	background-position: center;
+	-webkit-appearance: none;
+	outline: none;
+}
+
+.check:checked {
+	background-image: url(../../img/icon/tabs_completed_selceted@3x-min.png);
+	background-color: #fff;
+	outline: none;
+}
+
+.addrFooter {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	font-size: 14px;
+	color: #FFFFFF;
+	background-color: #F02804;
+}
+
+.addrFooter:active {
+	opacity: .7;
+}
+
+aside {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, .5);
+	-webkit-animation: aside .3s;
+}
+
+@-webkit-keyframes aside{
+	from {
+		background-color: rgba(0, 0, 0, 0);
+	}
+	to {
+		background-color: rgba(0, 0, 0, .5);
+	}
+}
+
+aside .del {
+	position: absolute;
+	bottom: 15px;
+	left: 5%;
+	width: 90%;
+	border-radius: 3px;
+	background-color: #FFFFFF;
+	-webkit-transform: translate3d(0, 100% 0);
+	-webkit-animation: del .5s forwards;
+}
+
+@-webkit-keyframes del {
+	from {
+		-webkit-transform: translate3d(0, 100%, 0);
+	}
+	to {
+		-webkit-transform: translate3d(0, 0, 0);
+	}
+}
+
+aside .del> div {
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	color: #F02804;
+	font-size: 14px;
+}
+
+aside .del> div:active {
+	font-size: 15px;
+}
+
+aside .del> p {
+	margin: 0;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	font-size: 14px;
+	color: #222;
+}
+
+aside .del> p:active {
+	opacity: .7;
+}
+

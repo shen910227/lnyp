@@ -1,0 +1,400 @@
+body {
+	background-color: #eee;
+}
+
+.headerPub:after {
+	content: '';
+	display: block;
+	width: 100%;
+	border-bottom: 1px solid #d8d8d8;
+	transform: scaleY(0.5);
+	-webkit-transform: scaleY(0.5);
+}
+
+.payInfoBox {
+	width: 100%;
+	box-sizing: border-box;
+	padding: 0 15px;
+	margin-top: 40px;
+	margin-bottom: 10px;
+	background-color: #fff;
+}
+
+.payInfoBox__orderNo {
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	font-size: 14px;
+	color: #333;
+}
+
+.payInfoBox__orderNo:after {
+	content: '';
+	display: block;
+	width: 100%;
+	border-bottom: 1px solid #e5e5e5;
+	transform: scaleY(0.5);
+	-webkit-transform: scaleY(0.5);
+}
+
+.payInfoBox__table {
+	width: 100%;
+	height: 62px;
+	padding: 8px 0;
+	box-sizing: border-box;
+	position: relative;
+}
+
+.payInfoBox__table:after {
+	content: '';
+	display: block;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	border-bottom: 1px solid #e5e5e5;
+	transform: scaleY(0.5);
+	-webkit-transform: scaleY(0.5);
+}
+
+.payInfoBox__tr {
+	padding: 0px;
+}
+
+.payInfoBox__title,
+.payInfoBox__bottomTit {
+	font-size: 14px;
+	color: #333;
+	text-align: left;
+	padding: 2px 0;
+}
+
+.payInfoBox__main,
+.payInfoBox__bottomPay {
+	font-size: 14px;
+	color: #F02804;
+	text-align: right;
+}
+
+.payInfoBox__bottom {
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+}
+
+.payInfoBox__bottomTit {
+	display: block;
+	float: left;
+	text-align: left;
+}
+
+.payInfoBox__bottomPay {
+	display: block;
+	float: right;
+	text-align: right;
+}
+
+.paymentBox {
+	width: 100%;
+	background-color: #FFFFFF;
+}
+
+.paymentBox__title {
+	width: 100%;
+	height: 40px;
+	padding: 0 15px;
+	box-sizing: border-box;
+	line-height: 40px;
+	font-size: 14px;
+	color: #333;
+	position: relative;
+}
+
+.paymentBox__title:after {
+	content: '';
+	display: block;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	border-bottom: 1px solid #e5e5e5;
+	transform: scaleY(0.5);
+	-webkit-transform: scaleY(0.5);
+}
+
+.paymentBox__listBox {
+	width: 100%;
+	padding: 0 15px;
+	box-sizing: border-box;
+}
+
+.paymentBox__itemBox {
+	width: 100%;
+	height: 50px;
+	box-sizing: border-box;
+	line-height: 50px;
+	font-size: 12px;
+	color: #222;
+	position: relative;
+}
+
+.paymentBox__itemBox:after {
+	content: '';
+	display: block;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	border-bottom: 1px solid #e5e5e5;
+	transform: scaleY(0.5);
+	-webkit-transform: scaleY(0.5);
+}
+
+.paymentBox__radio {
+	width: 18px;
+	height: 18px;
+	position: absolute;
+	top: 50%;
+	margin-top: -9px;
+	left: 0px;
+	border-radius: 50%;
+	background-image: url(../../img/icon/btn_danxuan-min.png);
+	background-repeat: no-repeat;
+	background-size: 18px 18px;
+	background-position: center;
+	-webkit-appearance: none;
+	outline: none;
+}
+
+.paymentBox__radio:checked {
+	background-image: url(../../img/icon/btn_fuxuan-min.png);
+	background-color: #fff;
+	outline: none;
+}
+
+.paymentBox__icon {
+	width: 28px;
+	height: 28px;
+	position: absolute;
+	top: 50%;
+	margin-top: -14px;
+	left: 38px;
+}
+
+.paymentBox__text {
+	padding-left: 75px;
+}
+
+.payFooter {
+	width: 100%;
+	height: 50px;
+	box-sizing: border-box;
+	padding-left: 15px;
+	background-color: #FFFFFF;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+}
+
+.payFooter__pay {
+	height: 50px;
+	line-height: 50px;
+	font-size: 14px;
+	color: #F02804;
+}
+
+.payFooter__btn {
+	width: 100px;
+	height: 50px;
+	background-color: #F02804;
+	border: none;
+	text-align: center;
+	line-height: 50px;
+	font-size: 16px;
+	color: #fff;
+	position: absolute;
+	right: 0;
+	top: 0;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.payFooter__btn:active {
+	opacity: 0.7;
+}
+
+.loadingBg {
+	position: fixed;
+	top: 40px;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	display: none;
+}
+
+.loadingBg__Box {
+	width: 100%;
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	margin-top: -60px;
+}
+
+.loadingBg__img {
+	width: 40px;
+	height: 40px;
+}
+
+.loadingBg__text {
+	padding-top: 10px;
+	font-size: 14px;
+	color: #d4d4d4;
+}
+
+.fankaSMSBg {
+	display: none;
+	-webkit-animation: asidean .2s;
+}
+
+.fankaSMS {
+	width: 80%;
+	background-color: #fff;
+	position: absolute;
+	top: 50%;
+	left: 10%;
+	margin-top: -150px;
+	border-radius: 3px;
+	overflow: hidden;
+	font-size: 14px;
+	-webkit-animation: divan .2s;
+}
+
+.fankaSMS__title {
+	width: 100%;
+	height: 50px;
+	background-color: #F02804;
+	color: #fff;
+	text-align: center;
+	line-height: 50px;
+}
+
+.fankaSMS__txt {
+	padding: 20px 15px;
+	color: #666;
+}
+
+.fankaSMS__SMSBox {
+	width: 100%;
+	box-sizing: border-box;
+	padding: 0 15px 20px;
+	position: relative;
+}
+
+.fankaSMS__SMSBox:after {
+	content: '';
+	display: block;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	border-bottom: 1px solid #e5e5e5;
+	transform: scaleY(0.5);
+	-webkit-transform: scaleY(0.5);
+}
+
+.fankaSMS__inputBoxs {
+	width: 100%;
+	box-sizing: border-box;
+	padding-right: 100px;
+}
+
+.fankaSMS__input {
+	height: 40px;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 0 6px;
+	border: 1px solid #DADADA;
+	border-radius: 2px;
+	font-size: 14px;
+	color: #000;
+}
+
+.fankaSMS__getBtn {
+	width: 90px;
+	height: 40px;
+	background-color: #7DC91C;
+	border: none;
+	border-radius: 2px;
+	font-size: 14px;
+	color: #fff;
+	position: absolute;
+	top: 0;
+	right: 15px;
+}
+
+.fankaSMS__YN {
+	overflow: hidden;
+	position: relative;
+}
+
+.fankaSMS__YN:after {
+	content: '';
+	display: block;
+	height: 100%;
+	position: absolute;
+	bottom: 0;
+	right: 50%;
+	border-right: 1px solid #e5e5e5;
+	transform: scaleX(0.5);
+	-webkit-transform: scaleX(0.5);
+}
+
+.fankaSMS__N {
+	width: 50%;
+	height: 44px;
+	background-color: #fff;
+	font-size: 16px;
+	color: #26AAE5;
+	float: left;
+}
+
+.fankaSMS__Y {
+	width: 50%;
+	height: 44px;
+	background-color: #fff;
+	font-size: 16px;
+	color: #26AAE5;
+	float: left;
+}
+
+@-webkit-keyframes asidean {
+	from {
+		background-color: rgba(0, 0, 0, 0);
+	}
+	to {
+		background-color: rgba(0, 0, 0, .5);
+	}
+}
+
+@-webkit-keyframes divan {
+	from {
+		-webkit-transform: scale3d(.9, .9, 1);
+	}
+	to {
+		-webkit-transform: scale3d(1, 1, 1);
+	}
+}
+
+.aLiTips {
+	box-sizing: border-box;
+	background-color: rgba(0, 0, 0, 0.7);
+	display: none;
+}
+
+.aLiTips__img {
+	width: 80%;
+	position: absolute;
+	top: 10px;
+	right: 30px;
+}

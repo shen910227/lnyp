@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+
+	<head>
+		<script src="../../plugin/dataStatistics.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../plugin/aide.js?v=201610170912" async></script>
+		<script src="../../plugin/app.js?v=201609181415" async></script>
+		<script src="gift.js?v=201609011717" async></script>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width = device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1" />
+		<meta content="telephone=no" name="format-detection" />
+		<title>兑换</title>
+		<link rel="stylesheet" type="text/css" href="../../public-style/style.min.css?v=201609011717"/>
+		<link rel="stylesheet" type="text/css" href="gift.min.css?v=201609011717"/>
+		<link rel="stylesheet" type="text/css" href="../../public-style/loading.css?v=201609011717"/>
+	</head>
+
+	<body>
+		<header class="back-tit">
+			<img class="back-but" src="../../img/icon/icon_back@3x.png" /> 兑换
+		</header>
+		<section class="phoneDiv border-linear-bottom">
+			<input id="phone" class="phone" readonly/>
+		</section>
+		<section class="phoneDiv_Pic border-linear-bottom">
+			<input id="vcode" class="phone_picture" placeholder="请点击右方获取图片验证码" />
+			<div id="get-imgver" class="pic_span">获取图片验证码</div>
+		</section>
+		<section class="zhuanzengDiv">
+			<button id="zm-but" class="zhuanzeng">兑换</button>
+		</section>
+		<section class="beizhuDiv">
+			<div class="beizhu">备注：</div>
+			<div class="beizhuText">
+				兑换成功后，所兑换的流量将无法退还。
+			</div>
+		</section>
+		<aside class="backDrop">
+			<div class="warnDiv">
+				<div class="questExch">
+					是否兑换？
+				</div>
+				<div class="buttonsDiv">
+					<div id="drop-cancale" class="cancale">
+						取消
+					</div>
+					<div id="drop-sure" class="sure">
+						确定
+					</div>
+				</div>
+			</div>
+		</aside>
+		<aside id="loadingImg" style="display:none;">
+			<p>
+				<img src="../../img/celan_logo copy 7-min.png" />
+				<span>兑换中...</span>
+			</p>
+		</aside>
+	</body>
+
+</html>

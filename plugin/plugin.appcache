@@ -1,0 +1,7 @@
+CACHE MANIFEST
+# 2016-6-15 v1.0.5
+CACHE:
+aide.min.js
+app.min.js
+NETWORK:
+*

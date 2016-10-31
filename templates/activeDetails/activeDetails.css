@@ -1,0 +1,15 @@
+.act-img> img{
+	display: block;
+	width: 100%;
+	padding: 15px;
+	box-sizing: border-box;
+}
+.con{
+	margin: 15px;
+	font-size: 14px;
+	color: #666666;
+}
+.con> p{
+	font-size: 15px;
+	color: #333333;
+}

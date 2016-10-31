@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html>
+
+	<head>
+		<script src="../../plugin/dataStatistics.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../plugin/aide.js?v=201610170912" async></script>
+		<script src="../../plugin/app.js?v=201609181415" async></script>
+		<script src="shopDetails.js?v=201610170912" async></script>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width = device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1" />
+		<meta content="telephone=no" name="format-detection" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../../public-style/style.css?v=201610170912"/>
+		<link rel="stylesheet" type="text/css" href="shopDetails.css?v=201609011717"/>
+	</head>
+
+	<body>
+		<header class="shop-top">
+			<img class="product-top__gotoOrder" src="../../img/icon/topbar_alllist@3x-min.png">
+			<div class="product-top__gotoSearchB">
+				<input class="product-top__gotoSearch" type="text" placeholder="点击进入搜索" disabled="disabled" />
+			</div>
+			<img class="product-top__gotoCart" src="../../img/icon/topbar_shopcart@3x-min.png">
+		</header>
+		<section class="shop-show">
+			<div class="shop-show__photo"><!--放图片--></div>
+			<h3 class="shop-show__name" value="storeName"></h3>
+			<!--<p class="shop-show__like">
+				<span></span>
+				<img class="shop-show__heart" src="../../img/icon/icon_like@3x-min.png" />
+			</p>-->
+		</section>
+
+		<section class="goods-list" id="pro-list" repeat="pro-list">
+
+			<div class="goods-list__goods" goto="proDetail">
+				<span class="goods-list__forPic">
+					<img class="goods-list__pic" url="productImage"/>
+				</span>
+
+				<p class="goods-list__title" value="productName"></p>
+				<div class="goods-list__info">
+					<strong class="goods-list__price" value="productPrice"></strong>
+					<p class="goods-list__sales" value="sales"></p>
+				</div>
+			</div>
+
+		</section>
+		<div class="loadTip"></div>
+		<button id='openShop' class="shop-btn" >我也要开店</button>
+		<!--_czc.push(["_trackEvent", "店铺页面", ai.]);-->
+	</body>
+
+</html>

@@ -1,0 +1,91 @@
+body{
+	background-color: #FFFFFF;
+}
+.box> div{
+	padding: 0 15px;
+	height: 50px;
+	line-height: 50px;
+	background-color: #FFFFFF;
+}
+#show_contact {
+	
+}
+
+
+.inp{
+	
+}
+.adr {
+	font-size: 14px;
+}
+.inp> input{
+	padding: 0;
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	font-size: 14px;
+	font-family: "microsoft yahei";
+	border: none;
+	-webkit-appearance: none;
+	outline: none;
+	box-sizing: border-box;
+}
+.adr> img{
+	float: right;
+	padding: 18px;
+	padding-right: 0;
+	width: 14px;
+}
+.adr:active{
+	opacity: .7;
+}
+
+.box .def{
+	position: relative;
+	padding-top: 7px;
+	line-height: 16px;
+	font-size: 12px;
+	color: #999999;
+	box-sizing: border-box;
+}
+.def> input{
+	position: absolute;
+	top: 11px;
+	right: 15px;
+	margin: 0;
+	width: 40px;
+	height: 26px;
+	background-image: url(../../img/icon/btn_close@3x-min.png);
+	background-position: center;
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	-webkit-appearance: none;
+	outline: none;
+}
+.def> input:checked{
+	background-image: url(../../img/icon/btn_open@3x-min.png);
+	background-color: transparent;
+}
+
+footer{
+	padding: 20px 15px;
+	text-align: center;
+	font-size: 14px;
+	background-color: #FFFFFF;
+}
+
+footer> button{
+	width: 100%;
+	height: 40px;
+	font-family: "microsoft yahei";
+	color: #FFFFFF;
+	font-size: 14px;
+	background-color: #F02804;
+	border-radius: 3px;
+	border: none;
+	-webkit-appearance: none;
+	outline: none;
+}
+footer> button:active{
+	opacity: .7;
+}
